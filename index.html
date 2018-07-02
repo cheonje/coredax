@@ -1,0 +1,1102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>::: 코어닥스  :::</title>
+<style type="text/css">
+	* {margin:0; padding:0;}
+	body {color:#666; font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif; padding:0 10px}
+	a {color:#333; text-decoration:none;}
+	a:link, a:visited, a:active, a:fover {color:#333; text-decoration:none;}
+	 a:hover {color:blue; text-decoration:underline;}
+	.header {border-bottom:1px solid #e21c0f; position:fixed; top:0; left:0; width:100%; background:#fff; font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif; z-index:10}
+	.header h1 {height:50px; line-height:48px; background:#e21c0f; color:#fff; font-size:26px; text-align:center; font-weight:normal;}
+	h3 {font-size:16px; color:#e21c0f; padding-bottom:5px;}
+	.guide_txt {padding:10px 20px; font-size:11px; font-weight:bold; color:#666; text-align:right; padding-right:20px}
+	.progress {height: 28px; line-height: 28px; text-align:right; padding-right:20px; padding-bottom:5px;}
+	.progress .total{ float: right ; width: 50%; border-left: 1px solid #eee;font-size:11px; font-weight:bold; color:#666; text-align: center; box-sizing: border-box; }
+	.progress .total_D{ float: left; width: 50%;  font-size:11px; font-weight:bold; color:#666; text-align: center;  }
+	.togglebtn{padding:2px 5px; margin:0; background:#000; border:0; border-radius:3px; color:#f2f2f2; font:bold 11px/1.5 Malgun Gothic, Tahoma, Sans-serif; cursor:pointer; text-decoration:none}
+	.noneHideBtn,
+	.noneHideBtn:hover,
+	.showHideBtn,
+	.showHideBtn:hover {padding:2px 8px; margin:0; background:#ab1111; border:0; border-radius:3px; color:#fff; font:bold 11px/1.5 Malgun Gothic, Tahoma, Sans-serif; cursor:pointer; text-decoration:none}
+	.body {margin-top: 100px;}
+	.section {position: relative}
+	h2.title {  margin:0; top: 170px; padding:5px 20px; left: 0;  background-color:#6b7178; color:#fff; font-weight:bold; font-size:100%; margin-top:-1px; *zoom:1; cursor:pointer; z-index: 1000; color: #fff;}
+	.title a{color: #fff; }
+	.section .title  + table {position: absolute;  }
+	.section {margin-bottom:20px; }
+	.section .title_toggle {margin:0; padding:0 0 6px 0;  color:#000; font-weight:bold; font-size:100%; margin-top:-1px; position:relative; *zoom:1;}
+	.section table {width:100%; border-collapse:collapse; border-spacing:0; border:0; table-layout:fixed;}
+	.section table caption {display:none;}
+	.section table th {vertical-align:top; color:#333; background-color:#f1f1f1; text-align:center; padding:8px 0 ; border:1px solid #d1d1d1; vertical-align:middle;}
+	.section table td {text-align:left; padding: 5px ;/* text-overflow: ellipsis; overflow: hidden; white-space: norwap; */ border:1px solid #e1e1e1; }
+	.section table td.tit {color:#333; font-weight:bold;}
+	.section table td.file {color:#aaa;}
+	.section table td.date {text-align:center;  white-space:nowrap;}
+	.section table td.date del {display:block; color:#aaa !important;}
+	.section table td.stat , .section table td.statD{text-align:center; font-family:Gulim;}
+	 .statD{color: #db2124}
+	 .stat {color: #5da9dd}
+	.section table td.desc, .section table td.note, .section table td.history { color:#777; font-size:12px;}
+	.section table td.author {text-align:center; white-space:nowrap;}
+	.section table td ul {list-style:none; margin:0; padding:0 10px;}
+	.section table td em {color:#c82026;}
+	.section table td em.blue {color:#69f;}
+	.section table tr.divi {border-top:2px solid #999;}
+	.section table tr.overcoloring {}
+	.section table tr.today {background:#fcf7bd;}  /*  수정 */
+	.section table tr.new {background:#e6ecef;}  /*  신규 */
+	.section table tr.today .date {color:#444;}
+	.section table td.history-jira {font-size:12px;}
+	.section table td.history-jira a {color:#3b73af; font-weight:bold;}
+	.section table td.cen {text-align:center;}
+	.section table td.history ul li:before, .section table td.history-jira ul li:before {content:'- ';}
+	.section table .taCenter{text-align:center !important}
+	.check  td {background: #888; color: #fff; }
+	.check  td a {color: #fff; }
+	.section table .none{background:#e9eef1}/*중복스타일게시판*/
+	.section table .none2{background:#dce7be}/*기획서내 내용없음*/
+	table td span.red {color:red} /* 추가 수정*/
+	.brbottom1 td{border-bottom: 1px solid #cecece; }
+	.brbottom2 td{border-bottom: 2px solid #8a8a8a; }
+	td.brbottom2{border-bottom: 2px solid #aaa; }
+	#goTop {position: fixed; width: 40px; height: 40px; line-height: 40px; right: 10px; bottom: 20px;  background: #000; color: #fff; font-size: 14px; text-align: center; }
+	
+</style>
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script type="text/javascript">
+	jQuery.fn.stat = function (options) {
+		var settings = jQuery.extend({
+				total: '.total',
+				toggleBtn: '.togglebtn',
+				noneHideBtn: '.noneHideBtn',
+				title: 'h2.title',
+				content: 'div.content',
+				files: 'tbody tr',
+				noCount:'tbody tr.dg',
+				stat: 'td.stat',
+				completed: '●',
+				index: 0,
+				openAll: true
+			}, options),
+			all_sections = this;
+		return this.each(function () {
+			//var realNum = files.length - noCount.length, 
+			var self = this,
+				$self = $(self),
+				title_text = [],
+				completed = 0;
+			self.section_title = $(settings.title, $self);
+			self.content = $(settings.content, $self);
+			self.files = $(settings.files, $self);
+			self.files.each(function () {
+				var stat = $(settings.stat, this);
+				stat.each(function () {
+					var text = $(this).text();
+					if (text && (text === settings.completed)) {
+						completed++;
+					}
+				});
+			});
+			title_text = [self.section_title.text(), ' (퍼블 진행상황: ',completed,' / ',self.files.length,' ) '];
+			self.section_title.text(title_text.join(''));
+			self.section_title.click(function() {
+				self.content.slideToggle(450);
+			}); 
+		
+			
+			$(settings.toggleBtn).text('전체닫기').toggle(function() {
+				$(settings.toggleBtn).text('전체열기');
+				$(settings.content).hide();
+			}, function() {
+				$(settings.toggleBtn).text('전체닫기');
+				$(settings.content).show();
+			});
+
+			/*
+			$(settings.noneHideBtn).text('공통 페이지  열기').toggle(function() {
+				$(settings.noneHideBtn).text('공통 페이지 닫기');
+				$(settings.noCount).show();
+			}, function() {
+				$(settings.noneHideBtn).text('공통 페이지  열기');
+				$(settings.noCount).hide();
+			}); */
+			
+
+			//total
+			var completedAll = 0;
+			$(settings.stat).each(function () {
+				var text = $(this).text();
+				if (text && (text == settings.completed)) {
+					completedAll++;
+				}
+			});
+			$(settings.total).text('퍼블리싱 진행률 : '+completedAll+' / '+$(settings.files).length+'pages (전체진행율'+Math.round(completedAll/$(settings.files).length*100)+'%)');
+
+		});
+	};
+
+	jQuery.fn.statD = function (options) {
+		var settings = jQuery.extend({
+				total_D: '.total_D',
+				toggleBtn: '.togglebtn',
+				title: 'h2.title',
+				content: 'div.content',
+				files: 'tbody tr',
+				statD: 'td.statD',
+				completed: '●',
+				index: 0,
+				openAll: true
+			}, options),
+			all_sections = this;
+		return this.each(function () {
+			var self = this,
+				$self = $(self),
+				title_text = [],
+				completed = 0;
+			self.section_title = $(settings.title, $self);
+			self.content = $(settings.content, $self);
+			self.files = $(settings.files, $self);
+			self.files.each(function () {
+				var statD = $(settings.statD, this);
+				statD.each(function () {
+					var text = $(this).text();
+					if (text && (text === settings.completed)) {
+						completed++;
+					}
+				});
+			});
+			title_text = [self.section_title.text(), '디자인 진행상황: ',completed,' / ',self.files.length,')'];
+			self.section_title.text(title_text.join(''));
+			
+
+			//total
+			var completedAll_D = 0;
+			$(settings.statD).each(function () {
+				var text = $(this).text();
+				if (text && (text == settings.completed)) {
+					completedAll_D++;
+				}
+			});
+			$(settings.total_D).text('디자인진행률 : '+completedAll_D+' / '+$(settings.files).length+'pages (전체진행율'+Math.round(completedAll_D/$(settings.files).length*100)+'%)');
+
+		});
+	};
+
+	$(document).ready(function () {
+		$('div.section').stat();
+		$('div.section').statD();
+
+		//over-coloring
+		$('div.section tbody tr').mouseover(function() {
+			$(this).addClass('overcoloring');
+		}).mouseout(function() {
+			$(this).removeClass('overcoloring');
+		});
+
+		//today date
+		var date = new Date();
+		var dateYear= date.getFullYear();
+		var dateMonth = (date.getMonth()+1)>9 ? ''+(date.getMonth()+1) : '0'+(date.getMonth()+1);
+		var dateDay = date.getDate()>9 ? ''+date.getDate() : '0'+date.getDate();
+		var todayDateText = dateYear + '-' + dateMonth + '-' + dateDay;
+
+		$('td.date').each(function() {
+			if ($(this).text().indexOf(todayDateText) != -1) {
+				$(this).parent('tr').addClass('today');
+			}
+		});
+	});
+</script>
+</head>
+<body id="body">
+<div class="header">
+	<h1> Coredax 구축 프로젝트 HTML</h1>
+	<p class="guide_txt">△ : 대기 / ○ : 부분완료 /  <span class="statD">● </span>: 디자인 완료 /  <span class="stat">● </span>: 퍼블리싱완료</p>
+</div>
+<div class="body">
+
+	<div class="section">
+		<h2 class="title com"><a href="#com" class="scroll1">HTML List</a></h2>
+		<div class="content "   id="com">
+			<table border="1">
+				<colgroup>
+					<col width="5%" />
+					<col width="12%" />
+					<col width="12%" />
+					<col width="12%" />
+					<col width="12%" />
+					<col width="15%" />
+					<col width="5%" />
+					<col width="7%" />
+					<col width="*" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">1depth</th>
+						<th scope="col">2depth</th>
+						<th scope="col">3depth</th>
+						<th scope="col">4depth</th>
+						<th scope="col">Html</th>
+						<th scope="col" title="△ :대기 / ○ :부분완료 / ● :완료">Publishing </th>
+						<th scope="col">완료일</th>
+						<th scope="col">note</th>
+			  		</tr>
+				</thead>
+
+				<!-- Guide -->
+				<tbody>
+					<tr class="count" >
+						<td rowspan="3">Guide</td>
+						<td>메인레이아웃</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/main.html" target="_blank">main.html</a></td>
+						<td class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+					</tr>
+					<tr class="count" >
+						<td>서브레이아웃1</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_sub_cont.html" target="_blank">pub_sub_cont.html</a></td>
+						<td class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+					</tr>
+					<tr class="count" >
+						<td>서브레이아웃2</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_type.html" target="_blank">pub_join_type.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+					</tr>
+				</tbody>
+				<!-- // Guide -->
+
+				<!--  메인 -->
+				<tbody>
+					<tr class="count divi" >
+						<td>Main</td>
+						<td>메인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/main.html" target="_blank">main.html</a></td>
+						<td class="cen stat">●</td>
+						<td class="cen"></td>
+						<td></td>
+					</tr>
+				</tbody>
+				<!-- //메인 -->
+
+				<!--  gnb -->
+				<tbody>
+					<tr class="count divi" >
+						<td rowspan="66">GNB</td>
+						<td rowspan="8">코인거래</td>
+						<td rowspan="6">즉시주문</td>
+						<td rowspan="3">즉시구매</td>
+						<td>금액으로사기</td>
+						<td><a href="/src/html/pub_direct_buy01.html" target="_blank">pub_direct_buy01.html</a></td>
+						<td class="cen stat">●</td>
+						<td class="cen"></td>
+						<td></td>
+					</tr>
+					<tr class="count" >
+					  <td>수량으로사기</td>
+					  <td><a href="/src/html/pub_direct_buy02.html" target="_blank">pub_direct_buy02.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>확인(팝업)</td>
+					  <td><a href="/src/html/pub_direct_buy_pop.html" target="_blank">pub_direct_buy_pop.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="3">즉시판매</td>
+					  <td>금액으로사기</td>
+					  <td><a href="/src/html/pub_direct_sell01.html" target="_blank">pub_direct_sell01.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>수량으로사기</td>
+					  <td><a href="/src/html/pub_direct_sell02.html" target="_blank">pub_direct_sell02.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>확인(팝업)</td>
+					  <td><a href="/src/html/pub_direct_sell_pop.html" target="_blank">pub_direct_sell_pop.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>주문종합</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_trade_total.html" target="_blank">pub_trade_total.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>웹트레이딩(WTS)</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td>&nbsp;</td>
+					  <td class="cen"></td>
+					  <td class="cen"></td>
+					  <td>매매시시템 &gt; 웹트레이딩시스템과 같은 내용?</td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="6">코인동향</td>
+					  <td>전체코인동향</td>
+					  <td>KRW/BTC/ETH</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_all_coin_trend.html" target="_blank">pub_all_coin_trend.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>관심코인동향</td>
+					  <td>관심코인동향</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_concern_coin_trend.html" target="_blank">pub_concern_coin_trend.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>관심코인편집(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_coin_trend_pop.html#concernEdit" target="_blank">pub_coin_trend_pop.html#concernEdit</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>코인현재가</td>
+					  <td>코인현재가</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_coin_current.html" target="_blank">pub_coin_current.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>코인개요(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_coin_trend_pop.html#coinSummary" target="_blank">pub_coin_trend_pop.html#coinSummary</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>SCI지수</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_sci_index.html" target="_blank">pub_sci_index.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="10">자산관리</td>
+					  <td>자산평가</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_assets_assess.html" target="_blank">pub_assets_assess.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>원화입금예약</td>
+					  <td>원화입금신청</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_won_deposit.html" target="_blank">pub_won_deposit.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>원화입금신청(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_assets_pop.html#wonDeposit" target="_blank">pub_assets_pop.html#wonDeposit</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>원화출금</td>
+					  <td>원화출금</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_won_withdraw.html" target="_blank">pub_won_withdraw.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>수수료 안내(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_assets_pop.html#chargeGuide" target="_blank">pub_assets_pop.html#chargeGuide</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>출금한도안내(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_assets_pop.html#withdrawLimit" target="_blank">pub_assets_pop.html#withdrawLimit</a></td>
+					 <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>코인입급</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_coin_deposit.html" target="_blank">pub_coin_deposit.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>코인출금</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_coin_withdraw.html" target="_blank">pub_coin_withdraw.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>입출금내역</td>
+					  <td>입출금내역</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_banking_list.html" target="_blank">pub_banking_list.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>코인출금취소(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_assets_pop.html#coinCancle" target="_blank">pub_assets_pop.html#coinCancle</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="21">고객센터</td>
+					  <td>공지사항</td>
+					  <td>리스트</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_bbs_notice.html#noticeList" target="_blank">pub_bbs_notice.html#noticeList</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>상세</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_bbs_notice.html#noticeView" target="_blank">pub_bbs_notice.html#noticeView</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>수수료안내</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_assets_pop.html#chargeGuide" target="_blank">pub_assets_pop.html#chargeGuide</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>FAQ</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_faq_list.html" target="_blank">pub_faq_list.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="3">약관 및 유의사항</td>
+					  <td>이용약관</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_agreement.html" target="_blank">pub_agreement.html</a></td>
+					  <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>개인정보처리방침</td>
+					  <td></td>
+					  <td>&nbsp;</td>
+					  <td class="cen"></td>
+					  <td class="cen"></td>
+					  <td>내용없음</td>
+                  </tr>
+					<tr class="count" >
+					  <td>거래유의사항</td>
+					  <td></td>
+					  <td>&nbsp;</td>
+					  <td class="cen"></td>
+					  <td class="cen"></td>
+					  <td>내용없음</td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="3">매매시스템안내</td>
+					  <td>홈트레이딩시스템</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_hts.html" target="_blank">pub_hts.html</a></td>
+					   <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>모바일트레이딩시스템</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_mts.html" target="_blank">pub_mts.html</a></td>
+					   <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>웹트레이딩시스템</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_wts.html" target="_blank">pub_wts.html</a></td>
+					  <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td rowspan="5">소비자보호부</td>
+					  <td>소비자보호소개</td>
+					  <td></td>
+					  <td>&nbsp;</td>
+					  <td class="cen"></td>
+					  <td class="cen"></td>
+					  <td>메뉴구조도에 존재하지만 내용없음</td>
+                  </tr>
+					<tr class="count" >
+					  <td>윤리헌장</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_ethics.html" target="_blank">pub_ethics.html</a></td>
+					 <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>민원접수</td>
+					  <td>민원접수(인트로)</td>
+					  <td><a href="/src/html/pub_minwon_intro.html" target="_blank">pub_minwon_intro.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>민원접수안내</td>
+					  <td><a href="/src/html/pub_minwon_write.html" target="_blank">pub_minwon_write.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>민원확인 및 취하</td>
+					  <td><a href="/src/html/pub_minwon_list.html" target="_blank">pub_minwon_list.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>1:1문의</td>
+					  <td>1:1문의(작성)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_bbs_11_write.html" target="_blank">pub_bbs_11_write.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>나의 문의 내역(리스트)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_bbs_11_list.html" target="_blank">pub_bbs_11_list.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>나의 문의 내역(상세)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_bbs_11_view.html" target="_blank">pub_bbs_11_view.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>이메일/접속비번찾기</td>
+					  <td>이메일찾기</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_find_info.html" target="_blank">pub_find_info.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>접속비번찾기</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_find_info.html" target="_blank">pub_find_info.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+				  </tr>
+					<tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>접속비번찾기(휴대폰인증)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_find_info.html" target="_blank">pub_find_info.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+						<td rowspan="21">마이페이지</td>
+						<td rowspan="10">회원정보</td>
+						<td>회원정보</td>
+						<td></td>
+						<td><a href="/src/html/pub_my_info.html" target="_blank">pub_my_info.html</a></td>
+						<td class="cen stat">●</td>
+						<td class="cen"></td>
+						<td></td>
+					</tr>
+					<tr class="count" >
+					  <td>닉네임변경(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#nickChange" target="_blank">pub_my_pop.html#nickChange</a></td>
+					  <td class="cen stat">●</td>
+					  <td></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>입출금계좌등록(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#newBankNum" target="_blank">pub_my_pop.html#newBankNum</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>휴대폰본인인증(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#phoneNewConfirm" target="_blank">pub_my_pop.html#phoneNewConfirm</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>이메일인증(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#emailConfirm" target="_blank">pub_my_pop.html#emailConfirm</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>계좌비밀번호설정(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#bankPassChange" target="_blank">pub_my_pop.html#bankPassChange</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>접속비밀번호변경(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#loginPassChange" target="_blank">pub_my_pop.html#loginPassChange</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>계정잠금서비스(잠금/해제)(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#accLock" target="_blank">pub_my_pop.html#accLock</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>계정잠금서비스(해제완료)(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#accOpenMassage" target="_blank">pub_my_pop.html#accOpenMassage</a></td>
+					  <td class="cen stat">●</td>
+					  <td></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>계정잠금서비스(잠금완료)(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#accLockMassage" target="_blank">pub_my_pop.html#accLockMassage</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					
+                  
+                  
+					<tr class="count" >
+					  <td rowspan="2">코인주소관리</td>
+					  <td>코인주소록</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_coin_set.html" target="_blank">pub_my_coin_set.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>코인주소등록(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#newCoinCode" target="_blank">pub_my_pop.html#newCoinCode</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>API 관리</td>
+					  <td>API 관리</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_api_set.html" target="_blank">pub_my_api_set.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>&nbsp;</td>
+					  <td>API 삭제(팝업)</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_pop.html#apiKey" target="_blank">pub_my_pop.html#apiKey</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>휴대폰 초기화</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_phone_reset.html" target="_blank">pub_my_phone_reset.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  
+                  
+                  
+                  <tr class="count" >
+					  <td>OTP 해지</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_otp_cancle.html" target="_blank">pub_my_otp_cancle.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>설정</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_set.html" target="_blank">pub_my_set.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  
+                  <tr class="count" >
+					  <td>OTP 등록하기</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_otp_regist.html" target="_blank">pub_my_otp_regist.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>본인 신분확인</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_identify.html" target="_blank">pub_my_identify.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>회원탈퇴</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_leave.html" target="_blank">pub_my_leave.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>계좌비밀번호 초기화</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_my_bkPass_reset.html" target="_blank">pub_my_bkPass_reset.html</a></td>
+					   <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+			</tbody>
+			<!-- //gnb -->
+
+			<!-- header -->
+            <tbody>
+					<tr class="count divi" >
+					  <td rowspan="9">Header</td>
+					  <td>로그인</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_login.html" target="_blank">pub_login.html</a></td>
+					  <td class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-가입유형</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_type.html" target="_blank">pub_join_type.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-기본정보(개인)</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_step01.html" target="_blank">pub_join_step01.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-기본정보(기업)</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_step01_company.html" target="_blank">pub_join_step01_company.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-약관동의</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_step02.html" target="_blank">pub_join_step02.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-이메일인증</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_step03.html" target="_blank">pub_join_step03.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-비밀번호설정</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_step04.html" target="_blank">pub_join_step04.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-가입완료(개인)</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_complete.html" target="_blank">pub_join_complete.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>회원가입-가입완료(기업)</td>
+					  <td></td>
+						<td></td>
+						<td></td>
+						<td><a href="/src/html/pub_join_complete.html" target="_blank">pub_join_complete.html</a></td>
+						<td  class="cen stat">●</td>
+						<td class="cen">&nbsp;</td>
+						<td></td>
+                  </tr>
+			</tbody>
+			<!-- //header -->
+
+			<!-- footer -->
+			<tbody>
+				<tr class="count divi" >
+					  <td rowspan="9">Footer</td>
+					  <td>회사소개</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td>개별 url 연결건</td>
+					  <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>이용약관</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_agreement.html" target="_blank">pub_agreement.html</a></td>
+					  <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>개인정보처리방침</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td>&nbsp;</td>
+					  <td class="cen"></td>
+					  <td class="cen"></td>
+					  <td>내용없음(중복메뉴)</td>
+                  </tr>
+					<tr class="count" >
+					  <td>윤리헌장</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_ethics.html" target="_blank">pub_ethics.html</a></td>
+					 <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>민원 접수</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_minwon_intro.html" target="_blank">pub_minwon_intro.html</a></td>
+					  <td  class="cen stat">●</td>
+					  <td></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>FAQ</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_faq_list.html" target="_blank">pub_faq_list.html</a></td>
+					 <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>교환유보자산관리안내</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_exchange_assets.html" target="_blank">pub_exchange_assets.html</a></td>
+					 <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					<tr class="count" >
+					  <td>API</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_api_guide.html" target="_blank">pub_api_guide.html</a></td>
+					  <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+                  <tr class="count" >
+					  <td>코인상장 기준</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td>PDF 파일 연결건</td>
+					  <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+					
+			</tbody>
+			<!-- //footer -->
+            <!-- email -->
+            <tbody>
+					<tr class="count divi" >
+					  <td>E-mail</td>
+					  <td>로그인 알림</td>
+					  <td>&nbsp;</td>
+					  <td>&nbsp;</td>
+					  <td></td>
+					  <td><a href="/src/html/pub_mail_form_login.html" target="_blank">pub_mail_form_login.html</a></td>
+				 <td  class="cen stat">●</td>
+					  <td class="cen"></td>
+					  <td></td>
+                  </tr>
+			</tbody>
+			<!-- //email -->
+            
+			<!-- //메인 -->
+			</table>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
