@@ -1,0 +1,232 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="mypage api_set"><!-- 마이페이지 API관리 시작 -->
+    <p class="page_head_txt">
+        API를 이용하시려면 본인 확인을 위해 휴대폰 인증이 필요합니다.<br>
+        API Key를 생성하기 전 활성화 항목 등을 다시 한번 확인하시고 API Key를 생성하시기 바랍니다.
+    </p>
+
+    <h4>IP 제한</h4>
+    <p class="tb_head_txt mb20">API를 사용하기 전에 접근 가능한 IP를 설정하세요. 해당 IP를 제외한 다른 IP로는 접근이 제한됩니다.</p>
+
+    <ul class="unline_table mb60">
+        <li>
+            <dl>
+                <dt>접근 IP설정</dt>
+                <dd><input type="text" name="" id="" placeholder="IP 주소를 입력하세요. 예시)111.222.333.444" class="w360"></dd>
+            </dl>
+        </li>
+    </ul>
+
+
+    <h4>API 항목설정</h4>
+    <div class="clearfix mb15">
+        <p class="tb_head_txt fl">API 사용시 프로그램 구축에 필요한 항목을 선택하세요.</p>
+        <p class="fr"><input type="checkbox" name="itemAll" id="itemAll" onclick="allcheck();"><label for="itemAll"><span></span><em>전체선택</em></label></p>
+    </div>
+
+    <table class="basic_cc cl mb20">
+        <caption>
+            API 항목설정
+            API 항목설정 적용 정보를 제공하며 회원지갑정보, 매수주문, 회원거래내역, 매도주문, 주문내역, 거래취소, KRW 출금, 코인 출금 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 50px;">
+            <col>
+            <col style="width: 50px;">
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td class="txt_c"><input type="checkbox" name="walletInfo" id="walletInfo" checked><label for="walletInfo"><span></span></label></td>
+            <td>회원지갑정보</td>
+            <td class="txt_c"><input type="checkbox" name="buyOrder" id="buyOrder"><label for="buyOrder"><span></span></label></td>
+            <td>매수주문</td>
+        </tr>
+        <tr>
+            <td class="txt_c"><input type="checkbox" name="tradeInfo" id="tradeInfo"><label for="tradeInfo"><span></span></label></td>
+            <td>회원거래내역</td>
+            <td class="txt_c"><input type="checkbox" name="sellOrder" id="sellOrder"><label for="sellOrder"><span></span></label></td>
+            <td>매도주문</td>
+        </tr>
+        <tr>
+            <td class="txt_c"><input type="checkbox" name="orderInfo" id="orderInfo"><label for="orderInfo"><span></span></label></td>
+            <td>주문내역</td>
+            <td class="txt_c"><input type="checkbox" name="tradeCancle" id="tradeCancle"><label for="tradeCancle"><span></span></label></td>
+            <td>거래취소</td>
+        </tr>
+        <tr>
+            <td class="txt_c"><input type="checkbox" name="krwWithdraw" id="krwWithdraw"><label for="krwWithdraw"><span></span></label></td>
+            <td>KRW 출금</td>
+            <td class="txt_c"><input type="checkbox" name="coinWithdraw" id="coinWithdraw"><label for="coinWithdraw"><span></span></label></td>
+            <td>코인 출금</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript"> //전체 체크
+    function allcheck(){
+        if(  $( "#itemAll" ).is( ":checked" ) ){
+            $( "#walletInfo" ).prop( "checked" , true);
+            $( "#buyOrder" ).prop( "checked" , true );
+            $( "#tradeInfo" ).prop( "checked" , true);
+            $( "#sellOrder" ).prop( "checked" , true );
+            $( "#orderInfo" ).prop( "checked" , true);
+            $( "#tradeCancle" ).prop( "checked" , true );
+            $( "#krwWithdraw" ).prop( "checked" , true);
+            $( "#coinWithdraw" ).prop( "checked" , true );
+
+        }else{
+            $( "#walletInfo" ).prop( "checked" , false);
+            $( "#buyOrder" ).prop( "checked" , false );
+            $( "#tradeInfo" ).prop( "checked" , false);
+            $( "#sellOrder" ).prop( "checked" , false );
+            $( "#orderInfo" ).prop( "checked" , false);
+            $( "#tradeCancle" ).prop( "checked" , false );
+            $( "#krwWithdraw" ).prop( "checked" , false);
+            $( "#coinWithdraw" ).prop( "checked" , false );
+        }
+    }
+    </script>
+
+    <ul class="li_tx mb60">
+        <li>한번 설정한 항목은 수정이 불가능하오니 API Key 생성 전에 다시 한번 확인하시기 바랍니다.</li>
+        <li>체크하시지 않은 항목은 데이터 접근이 불가능합니다.</li>
+    </ul>
+
+    <h4>보안 인증</h4>
+    <p class="tb_head_txt mb20">본인 확인을 위해 휴대폰 SNS 인증을 완료하시기 바립니다.</p>
+    <ul class="unline_table">
+        <li>
+            <dl>
+                <dt>휴대폰 인증번호</dt>
+                <dd><input type="text" name="" id="" placeholder="인증번호를 입력하세요." class="focus w320 mr8"><a href="#" class="md_btn">인증요청</a></dd>
+                <!--dd><span class="t_red">인증이 완료되었습니다.</span></dd--><!-- 인증완료 후 출력 -->
+            </dl>
+        </li>
+    </ul>
+
+    <div class="btnArea mb60">
+        <a href="#" class="large_btn bg_gray">API Key 생성</a><!-- 인증완료 후 bg_gray 클래스를 삭제하여 활성화 -->
+    </div>
+
+
+    <h4>API 사용리스트</h4>
+    <p class="tb_head_txt mb15">현재 사용중인 API 리스트입니다. 사용하지 않는 API는 비활성화 또는 삭제하시기 바랍니다.</p>
+
+    <table class="toggle_tb">
+        <caption>
+            API 사용리스트
+            API 사용리스트 정보를 제공하며 Connect Key, Secret Key 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 320px;">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col"><div class="tb_bd">Connect Key</div></th>
+            <th scope="col">Secret Key</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><div class="tb_bd">5654dg565544ds151654125dg51</div></td>
+            <td>
+                95156c21s655135d1213s512d3581c
+                <div class="api_ctrl">
+                    <a href="javascript:;" class="mn_btn mn_white toggleBtn">상세</a>
+                    <a href="#" class="mn_btn">활성화</a>
+                    <a href="#" class="mn_btn mn_white">삭제</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="list_chk"><!-- 설정 리스트 상세 출력 -->
+            <td colspan="2">
+                <ul class="clearfix hide">
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>회원지갑정보</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>주문내역</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>매수주문</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>거래취소</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>회원거래내역</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>KRW 출금</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>매도주문</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>코인 출금</label></li>
+
+                </ul>
+            </td>
+        </tr><!-- //설정 리스트 상세 출력 -->
+        <tr>
+            <td><div class="tb_bd">0246s5d1320162d026s5d134562s</div></td>
+            <td>
+                <div class="api_ctrl">
+                    <a href="javascript:;" class="mn_btn mn_white toggleBtn">상세</a>
+                    <a href="#" class="mn_btn mn_gray">비활성화</a><!-- 비활성화 일때 mn_gray 클래스 추가 -->
+                    <a href="#" class="mn_btn mn_white">삭제</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="list_chk"><!-- 설정 리스트 상세 출력 -->
+            <td colspan="2">
+                <ul class="clearfix hide">
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>회원지갑정보</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>주문내역</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>매수주문</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>거래취소</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>회원거래내역</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>KRW 출금</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>매도주문</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>코인 출금</label></li>
+
+                </ul>
+            </td>
+        </tr><!-- //설정 리스트 상세 출력 -->
+        <tr>
+            <td><div class="tb_bd">0351dd5g4684146sd516854fd568</div></td>
+            <td>
+                2d65213f5845263s851235848d984s
+                <div class="api_ctrl">
+                    <a href="javascript:;" class="mn_btn mn_white toggleBtn">상세</a>
+                    <a href="#" class="mn_btn">활성화</a>
+                    <a href="#" class="mn_btn mn_white">삭제</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="list_chk"><!-- 설정 리스트 상세 출력 -->
+            <td colspan="2">
+                <ul class="clearfix hide">
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>회원지갑정보</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>주문내역</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>매수주문</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>거래취소</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>회원거래내역</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>KRW 출금</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>매도주문</label></li>
+                    <li><input type="checkbox" name="" id=""><label for=""><span></span>코인 출금</label></li>
+
+                </ul>
+            </td>
+        </tr><!-- //설정 리스트 상세 출력 -->
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        // API 사용리스트 상세/접기
+        $(".api_ctrl .toggleBtn").click(function() {
+            if ($(this).hasClass('close') ) {
+                $(this).removeClass('close').text('상세');
+                $(this).closest('tr').next().find('ul').slideUp(200);
+            } else{
+                $(this).addClass('close').text('접기');
+                $(this).closest('tr').next().find('ul').slideDown(200);
+            }
+        });
+    </script>
+
+</div><!-- //마이페이지 API관리 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

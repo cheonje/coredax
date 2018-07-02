@@ -1,0 +1,57 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="assets_manage"><!-- 자산관리 원화입금 시작 -->
+
+    <p class="page_head_txt">
+        거래소 계좌에 원화를 입금하시려면 원화 입금신청을 하셔야 처리가 가능합니다.<br>
+        <span class="fw7">원화 입금 신청 후 20분 이내에 입금을 완료</span>하셔야 빠르게 입금처리가 가능합니다.
+    </p>
+
+    <h4 class="mb20">입출금 계좌 정보</h4>
+    <ul class="unline_table mb60">
+        <li>
+            <dl>
+                <dt>은행명</dt>
+                <dd><input type="text" readonly="readonly" value="국민은행" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>은행계좌번호</dt>
+                <dd><input type="text" readonly="readonly" value="12345612789654" class="w500"></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <!-- 등록계좌가 없을때 출력 -->
+    <!--div class="un_regist mb60">
+        <p>등록된 입출금계좌가 없습니다. 입출금 계좌를 등록하세요</p>
+        <a href="#" class="md_btn">입출금 계좌 등록</a>
+    </div-->
+
+    <h4 class="mb20">입금 금액 설정</h4>
+    <ul class="unline_table mb15">
+        <li>
+            <dl>
+                <dt>입금금액</dt>
+                <dd><input type="text" class="w360 mr8"><a href="#" class="md_btn">입금신청</a></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <ul class="li_tx">
+        <li>거래소 계좌에 원화를 최초 입금하시면 72시간 동안 원화 및 코인출금이 제한됩니다.</li>
+        <li>원화입출금 계좌는 본인 명의의 계좌만 등록가능하며 등록 후 변경이 불가능합니다.</li>
+        <li>입금 신청 후 20분을 초과하여 입금 시 입금처리에 24시간 이상 소요될  수 있습니다.</li>
+        <li>원화 입금 예약 후 당일 자정 이후까지 입금을 하지 않으시면 원화 입금 예약은 자동 취소 됩니다.</li>
+    </ul>
+
+
+
+
+
+</div><!-- //자산관리 원화입금 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

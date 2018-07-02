@@ -1,0 +1,420 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+
+<script type="text/javascript" src="../../assets/js/shlighter/shCore.js"></script>
+<script type="text/javascript" src="../../assets/js/shlighter/shBrushJScript.js"></script>
+<link type="text/css" rel="stylesheet" href="../../assets/css/shlighter/shCoreDefault.css"/>
+<script class="javascript">SyntaxHighlighter.defaults['toolbar'] = false; SyntaxHighlighter.all();</script>
+
+
+
+<div class="etcPage api_guide"><!-- API안내 시작 -->
+
+    <p class="page_head_txt">코어닥스에서는 아래와 같은 API 서비스를 제공합니다.<br>
+        HTTPS 프로토콜을 사용한 https://api.coredax.com/을 통해 API 접속이 가능합니다.<br>
+        API는 마이페이지의 API 설정에서 발급가능합니다.</p>
+
+    <h4>Public API</h4>
+
+    <table class="toggle_tb mb60"><!-- Public API -->
+        <caption>
+            Public API
+            Public API 정보를 제공하며 Resource, Description 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 440px;">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col"><div class="tb_bd">Resource</div></th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><div class="tb_bd">https://api.coredax.com/public/ticker/{currency}</div></td>
+            <td>
+                거래소 마지막 거래 정보
+                <div class="api_ctrl">
+                    <a href="javascript: ;" class="mn_btn mn_white toggleBtn">상세</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="sc_code"><!-- 상세 출력 -->
+            <td colspan="2">
+                <div class="clearfix hide">
+                    <p>※ {currency} = BTC, ETH, DASH, LTC, ETC, XRP, BCH, XMR, ZEC, QTUM, BTG, EOS, ICX, VEN, TRX, ELF, MITH, MCO, OMG, KNC,<br>
+                        GNT, HSR, ZIL, ETHOS, PAY, WAX, POWR, LRC, GTO, STEEM, STRAT, ZRX, REP, AE, XEM (기본값: BTC), ALL(전체)</p>
+
+                    <em>[Returned Example]</em>
+
+                    <pre class="brush: js;">
+                    {
+                        "status": "0000",
+                        "data": {
+                            "opening_price"     : "504000",
+                            "closing_price"     : "505000",
+                            "min_price"         : "504000",
+                            "max_price"         : "516000",
+                            "average_price"     : "509533.3333",
+                            "units_traded"      : "14.71960286",
+                            "volume_1day"       : "14.71960286",
+                            "volume_7day"       : "15.81960286",
+                            "buy_price"         : "505000",
+                            "sell_price"        : "504000",
+                            "24H_fluctate"      : "1000",
+                            "24H_fluctate_rate" : "0.19",
+                            "date"              : 1417141032622
+                        }
+                    }
+                    </pre>
+
+                </div>
+            </td>
+        </tr><!-- //상세 출력 -->
+        <tr>
+            <td><div class="tb_bd">https://api.coredax.com/public/orderbook/{currency} }</div></td>
+            <td>
+                거래소 판/구매 등록 대기 또는 거래 중 내역 정보
+                <div class="api_ctrl">
+                    <a href="javascript: ;" class="mn_btn mn_white toggleBtn">상세</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="sc_code"><!-- 상세 출력 -->
+            <td colspan="2">
+                <div class="clearfix hide">
+                    <p>※ {currency} = BTC, ETH, DASH, LTC, ETC, XRP, BCH, XMR, ZEC, QTUM, BTG, EOS, ICX, VEN, TRX, ELF, MITH, MCO, OMG, KNC,<br>
+                        GNT, HSR, ZIL, ETHOS, PAY, WAX, POWR, LRC, GTO, STEEM, STRAT, ZRX, REP, AE, XEM (기본값: BTC), ALL(전체)</p>
+
+                    <em>[Returned Example]</em>
+
+                    <pre class="brush: js;">
+                    {
+                        "status": "0000",
+                        "data": {
+                            "opening_price"     : "504000",
+                            "closing_price"     : "505000",
+                            "min_price"         : "504000",
+                            "max_price"         : "516000",
+                            "average_price"     : "509533.3333",
+                            "units_traded"      : "14.71960286",
+                            "volume_1day"       : "14.71960286",
+                            "volume_7day"       : "15.81960286",
+                            "buy_price"         : "505000",
+                            "sell_price"        : "504000",
+                            "24H_fluctate"      : "1000",
+                            "24H_fluctate_rate" : "0.19",
+                            "date"              : 1417141032622
+                        }
+                    }
+                    </pre>
+
+                </div>
+            </td>
+        </tr><!-- //상세 출력 -->
+        <tr>
+            <td><div class="tb_bd">https://api.coredax.com/public/transaction_history/{currency}</div></td>
+            <td>
+                bithumb 거래소 거래 체결 완료 내역
+                <div class="api_ctrl">
+                    <a href="javascript: ;" class="mn_btn mn_white toggleBtn">상세</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="sc_code"><!-- 상세 출력 -->
+            <td colspan="2">
+                <div class="clearfix hide">
+                    <p>※ {currency} = BTC, ETH, DASH, LTC, ETC, XRP, BCH, XMR, ZEC, QTUM, BTG, EOS, ICX, VEN, TRX, ELF, MITH, MCO, OMG, KNC,<br>
+                        GNT, HSR, ZIL, ETHOS, PAY, WAX, POWR, LRC, GTO, STEEM, STRAT, ZRX, REP, AE, XEM (기본값: BTC), ALL(전체)</p>
+
+                    <em>[Returned Example]</em>
+
+                    <pre class="brush: js;">
+                    {
+                        "status": "0000",
+                        "data": {
+                            "opening_price"     : "504000",
+                            "closing_price"     : "505000",
+                            "min_price"         : "504000",
+                            "max_price"         : "516000",
+                            "average_price"     : "509533.3333",
+                            "units_traded"      : "14.71960286",
+                            "volume_1day"       : "14.71960286",
+                            "volume_7day"       : "15.81960286",
+                            "buy_price"         : "505000",
+                            "sell_price"        : "504000",
+                            "24H_fluctate"      : "1000",
+                            "24H_fluctate_rate" : "0.19",
+                            "date"              : 1417141032622
+                        }
+                    }
+                    </pre>
+
+                </div>
+            </td>
+        </tr><!-- //상세 출력 -->
+        </tbody>
+    </table><!-- //Public API -->
+
+
+
+    <h4>Private  API</h4>
+
+    <table class="toggle_tb mb60"><!-- Private API -->
+        <caption>
+            Private API
+            Private API 정보를 제공하며 Resource, Description 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 440px;">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col"><div class="tb_bd">Resource</div></th>
+            <th scope="col">Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><div class="tb_bd">https://api.coredax.com/public/ticker/{currency}</div></td>
+            <td>
+                거래소 마지막 거래 정보
+                <div class="api_ctrl">
+                    <a href="javascript: ;" class="mn_btn mn_white toggleBtn">상세</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="sc_code"><!-- 상세 출력 -->
+            <td colspan="2">
+                <div class="clearfix hide">
+                    <p>※ {currency} = BTC, ETH, DASH, LTC, ETC, XRP, BCH, XMR, ZEC, QTUM, BTG, EOS, ICX, VEN, TRX, ELF, MITH, MCO, OMG, KNC,<br>
+                        GNT, HSR, ZIL, ETHOS, PAY, WAX, POWR, LRC, GTO, STEEM, STRAT, ZRX, REP, AE, XEM (기본값: BTC), ALL(전체)</p>
+
+                    <em>[Returned Example]</em>
+
+                    <pre class="brush: js;">
+                    {
+                        "status": "0000",
+                        "data": {
+                            "opening_price"     : "504000",
+                            "closing_price"     : "505000",
+                            "min_price"         : "504000",
+                            "max_price"         : "516000",
+                            "average_price"     : "509533.3333",
+                            "units_traded"      : "14.71960286",
+                            "volume_1day"       : "14.71960286",
+                            "volume_7day"       : "15.81960286",
+                            "buy_price"         : "505000",
+                            "sell_price"        : "504000",
+                            "24H_fluctate"      : "1000",
+                            "24H_fluctate_rate" : "0.19",
+                            "date"              : 1417141032622
+                        }
+                    }
+                    </pre>
+
+                </div>
+            </td>
+        </tr><!-- //상세 출력 -->
+        <tr>
+            <td><div class="tb_bd">https://api.coredax.com/public/orderbook/{currency} }</div></td>
+            <td>
+                거래소 판/구매 등록 대기 또는 거래 중 내역 정보
+                <div class="api_ctrl">
+                    <a href="javascript: ;" class="mn_btn mn_white toggleBtn">상세</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="sc_code"><!-- 상세 출력 -->
+            <td colspan="2">
+                <div class="clearfix hide">
+                    <p>※ {currency} = BTC, ETH, DASH, LTC, ETC, XRP, BCH, XMR, ZEC, QTUM, BTG, EOS, ICX, VEN, TRX, ELF, MITH, MCO, OMG, KNC,<br>
+                        GNT, HSR, ZIL, ETHOS, PAY, WAX, POWR, LRC, GTO, STEEM, STRAT, ZRX, REP, AE, XEM (기본값: BTC), ALL(전체)</p>
+
+                    <em>[Returned Example]</em>
+
+                    <pre class="brush: js;">
+                    {
+                        "status": "0000",
+                        "data": {
+                            "opening_price"     : "504000",
+                            "closing_price"     : "505000",
+                            "min_price"         : "504000",
+                            "max_price"         : "516000",
+                            "average_price"     : "509533.3333",
+                            "units_traded"      : "14.71960286",
+                            "volume_1day"       : "14.71960286",
+                            "volume_7day"       : "15.81960286",
+                            "buy_price"         : "505000",
+                            "sell_price"        : "504000",
+                            "24H_fluctate"      : "1000",
+                            "24H_fluctate_rate" : "0.19",
+                            "date"              : 1417141032622
+                        }
+                    }
+                    </pre>
+
+                </div>
+            </td>
+        </tr><!-- //상세 출력 -->
+        <tr>
+            <td><div class="tb_bd">https://api.coredax.com/public/transaction_history/{currency}</div></td>
+            <td>
+                bithumb 거래소 거래 체결 완료 내역
+                <div class="api_ctrl">
+                    <a href="javascript: ;" class="mn_btn mn_white toggleBtn">상세</a>
+                </div>
+            </td>
+        </tr>
+        <tr class="sc_code"><!-- 상세 출력 -->
+            <td colspan="2">
+                <div class="clearfix hide">
+                    <p>※ {currency} = BTC, ETH, DASH, LTC, ETC, XRP, BCH, XMR, ZEC, QTUM, BTG, EOS, ICX, VEN, TRX, ELF, MITH, MCO, OMG, KNC,<br>
+                        GNT, HSR, ZIL, ETHOS, PAY, WAX, POWR, LRC, GTO, STEEM, STRAT, ZRX, REP, AE, XEM (기본값: BTC), ALL(전체)</p>
+
+                    <em>[Returned Example]</em>
+
+                    <pre class="brush: js;">
+                    {
+                        "status": "0000",
+                        "data": {
+                            "opening_price"     : "504000",
+                            "closing_price"     : "505000",
+                            "min_price"         : "504000",
+                            "max_price"         : "516000",
+                            "average_price"     : "509533.3333",
+                            "units_traded"      : "14.71960286",
+                            "volume_1day"       : "14.71960286",
+                            "volume_7day"       : "15.81960286",
+                            "buy_price"         : "505000",
+                            "sell_price"        : "504000",
+                            "24H_fluctate"      : "1000",
+                            "24H_fluctate_rate" : "0.19",
+                            "date"              : 1417141032622
+                        }
+                    }
+                    </pre>
+
+                </div>
+            </td>
+        </tr><!-- //상세 출력 -->
+        </tbody>
+    </table><!-- //Private API -->
+
+    <script type="text/javascript">
+        // API 상세/접기
+        $(".api_ctrl .toggleBtn").click(function() {
+            if ($(this).hasClass('close') ) {
+                $(this).removeClass('close').text('상세');
+                $(this).closest('tr').next().find('div').slideUp(200);
+            } else{
+                $(this).addClass('close').text('접기');
+                $(this).closest('tr').next().find('div').slideDown(200);
+            }
+        });
+    </script>
+
+
+    <h4>ERROR CODE</h4>
+    <table class="basic_cc mb60">
+        <caption>
+            ERROR CODE
+            ERROR CODE 정보를 제공하며 CODE, MESSAGE 순으로 구성되어 있습니다.
+        </caption>
+        <colgroup>
+            <col style="width: 220px;">
+            <col>
+        </colgroup>
+
+        <thead>
+        <tr>
+            <th scope="col">CODE</th>
+            <th scope="col">MESSAGE</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>5100</td>
+            <td class="txt_l">Bad Request</td>
+        </tr>
+        <tr>
+            <td>5200</td>
+            <td class="txt_l">Not Member</td>
+        </tr>
+        <tr>
+            <td>5300</td>
+            <td class="txt_l">Invalid Apikey</td>
+        </tr>
+        <tr>
+            <td>5302</td>
+            <td class="txt_l">Method Not Allowed</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <h4>SAMPLE CODE</h4>
+    <table class="basic_cc mb60">
+        <caption>
+            SAMPLE CODE
+            SAMPLE CODE 정보를 제공하며 CODE, DOWNLOAD, CODE, DOWNLOAD 순으로 구성되어 있습니다.
+        </caption>
+        <colgroup>
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+            <col style="width: 25%;">
+        </colgroup>
+
+        <thead>
+        <tr>
+            <th scope="col">CODE</th>
+            <th scope="col">DOWNLOAD</th>
+            <th scope="col">CODE</th>
+            <th scope="col">DOWNLOAD</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>PHP</td>
+            <td><a href="#" class="purple_txt fw4">다운로드</a></td>
+            <td>JAVA</td>
+            <td><a href="#" class="purple_txt fw4">다운로드</a></td>
+        </tr>
+        <tr>
+            <td>C++(Windows)</td>
+            <td><a href="#" class="purple_txt fw4">다운로드</a></td>
+            <td>C++(Linux)</td>
+            <td><a href="#" class="purple_txt fw4">다운로드</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h5>※ Public  API</h5>
+    <ul class="li_tx mb15">
+        <li>1초당 20회 요청 가능합니다.</li>
+        <li>20회 초과 요청을 보내면 API 사용이 제한되며, 제한 상태 해제는 관리자 승인이 필요합니다. (1:1문의 또는 고객센터)</li>
+    </ul>
+
+    <h5>※ Private  API</h5>
+    <ul class="li_tx">
+        <li>1초당 10회 요청 가능합니다.</li>
+        <li>10회 초과 요청을 보내면 5분간 API 사용이 제한됩니다.</li>
+    </ul>
+
+
+
+
+</div><!-- //API안내 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->
+

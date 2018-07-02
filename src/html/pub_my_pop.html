@@ -1,0 +1,354 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+
+<div class="mb50 h200">
+
+    <p class="mb20">
+        *div class="modal" style="display: block;">*!-- 모달팝업 s -->
+        ...
+        */div>*!-- //모달팝업 e -->
+        <br>부분을 사용하시면 됩니다.
+    </p>
+    <p class="t_red">※ *는 < 입니다.</p>
+    <p class="t_red">※ style="display: block;" 를 지우고 사용하세요.</p>
+</div>
+
+
+
+<div class="mb50 h250">
+    <h4 id="apiKey" class="mb20">API Key 삭제</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <div class="pop_cont">
+                <p class="only_txt">API Key를 삭제합니다.</p>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">확인</a><a href="#" class="md_btn md_white">취소</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h500">
+    <h4 id="accLock" class="mb20">계정잠금 서비스(잠금/해제)</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">계정잠금 서비스</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">계정 잠금을 해제하시려면 본인 확인을 위해 이메일 인증 및 휴대폰 본인인증이 필요합니다.</p>
+                <ul class="clearfix large">
+                    <li><input type="checkbox" name="trade" id="trade" checked><label for="trade"><span></span>매매 제한 :<em> 매수 및 매도 등 매매 서비스를 이용할 수 없도록 제한</em></label></li>
+                    <li><input type="checkbox" name="withdraw" id="withdraw"><label for="withdraw"><span></span>출금 제한 :<em> 원화 및 코인을 출금할 수 없도록 제한</em></label></li>
+                </ul>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">신청</a><!-- 해제시에는 해제로 변경 -->
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+
+<div class="mb50 h300">
+    <h4 id="accOpenMassage" class="mb20">계정잠금 서비스(해제 메시지)</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">계정잠금 서비스</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="only_txt">계정잠금이 해제 되었습니다.</p>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">확인</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<div class="mb50 h300">
+    <h4 id="accLockMassage" class="mb20">계정잠금 서비스(잠금 메시지)</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">계정잠금 서비스</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="only_txt"><span class="t_red">계정잠금 매매 제한</span> 신청완료<br>
+                    <span class="fw4">해킹이 의심되실 경우 고객센터로 문의하세요.</span></p>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">확인</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h300">
+    <h4 id="emailConfirm" class="mb20">이메일 인증</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">이메일 인증</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">고객님께서 등록하신 이메일로 인증 메일이 발송됩니다.</p>
+                <dl class="clearfix">
+                    <dt>E-mail</dt>
+                    <dd><input type="text" name="" id="" value="Tes****@naver.com" readonly="readonly" class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">인증메일 발송</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<div class="mb50 h300">
+    <h4 id="phoneNewConfirm" class="mb20">휴대폰 본인인증(신규)</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">휴대폰 본인인증</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">본인명의의 휴대폰으로만 휴대폰 인증이 가능합니다.</p>
+                <dl class="clearfix">
+                    <dt>휴대폰번호</dt>
+                    <dd><input type="text" name="" id="" maxlength="11" placeholder="-를 제외하고 입력하세요" class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">휴대폰 본인인증</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<div class="mb50 h300">
+    <h4 id="phoneConfirm" class="mb20">휴대폰 본인인증</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">휴대폰 본인인증</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">본인명의의 휴대폰으로만 휴대폰 인증이 가능합니다.</p>
+                <dl class="clearfix">
+                    <dt>휴대폰번호</dt>
+                    <dd><input type="text" name="" id="" maxlength="11" value="010-****-1234" readonly="readonly" class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">휴대폰 본인인증</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h500">
+    <h4 id="bankPassChange" class="mb20">계좌 비밀번호 설정(변경)</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">계좌 비밀번호 설정</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">계좌 비밀번호는 매매 및 출금시 사용합니다. <span class="fw7">※ 숫자 4자리</span></p>
+                <dl class="clearfix large">
+                    <dt>현재 계좌비밀번호</dt>
+                    <dd><input type="password" name="" id="" maxlength="4" class="w100p"></dd>
+                    <dt>변경할 계좌비밀번호</dt>
+                    <dd><input type="password" name="" id="" maxlength="4" class="w100p"></dd>
+                    <dt>계좌비밀번호 재입력</dt>
+                    <dd class="pass_input"><input type="password" name="" id="" maxlength="4" class="w100p bd_red"><!-- 비밀번호가 일치하면 bd_blue 클래스 추가, 불일치 bd_red -->
+                        <span class="t_red">비밀번호가 일치하지 않습니다.</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<div class="mb50 h500">
+    <h4 id="bankPass" class="mb20">계좌 비밀번호 설정</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">계좌 비밀번호 설정</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">계좌 비밀번호는 매매 및 출금시 사용합니다. <span class="fw7">※ 숫자 4자리</span></p>
+                <dl class="clearfix large">
+                    <dt>거래소 계좌번호</dt>
+                    <dd><input type="text" name="" id="" value="101000000001" readonly="readonly" class="w100p"></dd>
+                    <dt>계좌비밀번호</dt>
+                    <dd><input type="password" name="" id="" maxlength="4" class="w100p"></dd>
+                    <dt>계좌비밀번호 재입력</dt>
+                    <dd class="pass_input"><input type="password" name="" id="" maxlength="4" class="w100p bd_red"><!-- 비밀번호가 일치하면 bd_blue 클래스 추가, 불일치 bd_red -->
+                        <span class="t_red">비밀번호가 일치하지 않습니다.</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h500">
+    <h4 id="loginPassChange" class="mb20">접속 비밀번호 변경</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">접속 비밀번호 변경</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">접속비밀번호는 <span class="t_red">영문자, 숫자, 특수문자  포함 8~16자리</span>로 설정하실 수 있습니다.<br>
+                    생년월일, 전화번호, 연속된 숫자 등은 해킹 위험이 있으니 사용시 주의하시기 바랍니다.</p>
+                <dl class="clearfix pass_set">
+                    <dt>현재 비밀번호</dt>
+                    <dd><input type="password" name="" id="" maxlength="4" class="w100p"></dd>
+                    <dt>변경할 비밀번호</dt>
+                    <dd><input type="password" name="" id="" maxlength="4" class="w100p"></dd>
+                    <dd class="pass_list">
+                        <ul>
+                            <li class="pass">영문자</li><!-- 조건에 맞으면 pass 클래스 추가 -->
+                            <li>숫자</li>
+                            <li>특수문자</li>
+                            <li>8~16 자릿수</li>
+                        </ul>
+                    </dd>
+                    <dt>비밀번호 재입력</dt>
+                    <dd class="pass_input"><input type="password" name="" id="" maxlength="4" class="w100p bd_red"><!-- 비밀번호가 일치하면 bd_blue 클래스 추가, 불일치 bd_red -->
+                        <span class="t_red">비밀번호가 일치하지 않습니다.</span>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<div class="mb50 h400">
+    <h4 id="nickChange" class="mb20">닉네임 변경</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">닉네임 변경</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">닉네임은 최대 12자리까지 입력 가능합니다.</p>
+                <dl class="clearfix large">
+                    <dt>기존 닉네임</dt>
+                    <dd><input type="text" name="" id="" maxlength="12" value="기존닉네임을불러옴" readonly="readonly" class="w100p"></dd>
+                    <dt>변경할 닉네임</dt>
+                    <dd><input type="text" name="" id="" maxlength="12" class="w240 mr8"><a href="#" class="btn_white">중복확인</a></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h500">
+    <h4 id="newBankNum" class="mb20">입출금 계좌 등록</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">입출금 계좌 등록</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">원화 입출금 계좌는 <span class="t_red">본인 명의의 은행계좌</span>만 가능하며 ID 당 1개까지 등록하실 수 있습니다.</p>
+                <dl class="clearfix large">
+                    <dt>예금주</dt>
+                    <dd><input type="text" name="" id="" value="홍길동" readonly="readonly" class="w100p"></dd>
+                    <dt>은행명</dt>
+                    <dd>
+                        <select name="" id="" class="w100p">
+                            <option>은행명 선택</option>
+                            <option value="" selected="selected">산업은행</option>
+                            <option value="">국민은행</option>
+                            <option value="">우리은행</option>
+                        </select>
+                    </dd>
+                    <dt>계좌번호</dt>
+                    <dd><input type="text" name="" id="" class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h500">
+    <h4 id="newCoinCode" class="mb20">코인주소 등록</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">코인주소 등록</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <dl class="clearfix large">
+                    <dt>코인선택</dt>
+                    <dd>
+                        <select name="" id="" class="w50p">
+                            <option>코인선택</option>
+                            <option value="" selected="selected">비트코인</option>
+                            <option value="">비트코인2</option>
+                            <option value="">비트코인3</option>
+                        </select>
+                    </dd>
+                    <dt>별칭</dt>
+                    <dd><input type="text" name="" id="" placeholder="최대 8자까지 가능합니다." class="w100p"></dd>
+                    <dt>지갑주소</dt>
+                    <dd><input type="text" name="" id="" placeholder="코인주소를 입력 또는 붙여넣기 하세요." class="w100p"></dd>
+                    <dt>태그</dt>
+                    <dd><input type="text" name="" id="" placeholder="데스티네이션 태그를 입력 또는 붙여넣기 하세요." class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

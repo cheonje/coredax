@@ -1,0 +1,126 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="my_qna"><!-- 나의 문의내역 시작 -->
+    <p class="page_head_txt mb20">
+        1:1 문의가 많을 경우 답변에 다소 시간이 소요될 수 있는 점 양해바랍니다. 답변완료가 된 문의 사항은 3개월까지 보관됩니다.
+    </p>
+
+    <div class="bbs_skin"><!-- 게시판 스킨 시작 -->
+        <table class="bbs_list">
+            <!-- 게시판 목록 시작 -->
+            <caption>
+                나의 문의내역
+                나의 문의내역 목록으로 등록일, 분류, 제목, 진행상황 순으로 구성되어 있습니다.
+            </caption>
+            <colgroup>
+                <col style="width: 135px;">
+                <col style="width: 150px;">
+                <col>
+                <col style="width: 135px;">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col"><div>등록일</div></th>
+                <th scope="col"><div>분류</div></th>
+                <th scope="col"><div>제목</div></th>
+                <th scope="col"><div>진행상황</div></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            <!-- 게시물이 없을때 출력
+          <tr>
+            <td class="none" colspan="4">게시물이 없습니다.</td>
+          </tr>
+          -->
+
+            <!-- 게시물이 있을때 출력 -->
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">코인을 매도했는데 수수료가 왜 이렇죠?</a></td>
+                <td class="t_red">진행중</td><!-- 답변전 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">잔고가 이상합니다.</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">계정이 해킹당한거 같아요.</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">코인을 매도했는데 수수료가 왜 이렇죠?</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">잔고가 이상합니다.</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">계정이 해킹당한거 같아요.</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">코인을 매도했는데 수수료가 왜 이렇죠?</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">잔고가 이상합니다.</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">계정이 해킹당한거 같아요.</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <tr>
+                <td>2018-06-12</td>
+                <td>회원가입 및 계정</td>
+                <td class="subject"><a href="#">코인을 매도했는데 수수료가 왜 이렇죠?</a></td>
+                <td class="t_sky">답변완료</td><!-- 답변완료 -->
+            </tr>
+            <!-- //게시물이 있을때 출력 끝 -->
+            </tbody>
+        </table>
+        <!-- //게시판 목록 끝 -->
+
+        <div class="paging"><!-- 게시판 목록 페이징 시작 -->
+            <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_first.png" alt="맨처음으로"></a>
+            <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_prev.png" alt="이전목록"></a>
+            <a href="#" class="on">1</a><!-- 해당 페이지일때 on클래스 붙음-->
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_next.png" alt="다음목록"></a>
+            <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_last.png" alt="맨끝으로"></a> </div>
+        <!-- //게시판 목록 페이징 끝 -->
+
+    </div><!-- //게시판 스킨 끝 -->
+
+</div><!-- //나의 문의내역 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

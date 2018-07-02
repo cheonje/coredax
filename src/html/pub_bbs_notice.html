@@ -1,0 +1,159 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<h4 id="noticeList" class="mb30">공지사항 (리스트)</h4>
+
+<div class="bbs_skin"><!-- 게시판 스킨 시작 -->
+    <table class="bbs_list">
+        <!-- 게시판 목록 시작 -->
+        <caption>
+            공지사항
+            공지사항 목록으로 번호, 제목, 등록일 순으로 구성되어 있습니다.
+        </caption>
+        <colgroup>
+            <col style="width: 160px;">
+            <col>
+            <col style="width: 160px;">
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col"><div>번호</div></th>
+            <th scope="col"><div>제목</div></th>
+            <th scope="col"><div>등록일</div></th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <!-- 게시물이 없을때 출력
+      <tr>
+        <td class="none" colspan="3">게시물이 없습니다.</td>
+      </tr>
+      -->
+
+        <!-- 게시물이 있을때 출력 -->
+        <tr class="notice"><!-- 상단 고정 공지일때 notice 클래스 추가 -->
+            <td>2011</td>
+            <td class="subject"><img src="../../assets/images/module/bbs_notice.png" alt="NOTICE"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr class="notice"><!-- 상단 고정 공지일때 notice 클래스 추가 -->
+            <td>2010</td>
+            <td class="subject"><img src="../../assets/images/module/bbs_notice.png" alt="NOTICE"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2009</td>
+            <td class="subject"><img src="../../assets/images/module/bbs_new.png" alt="new"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2008</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2007</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2006</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2005</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2004</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2003</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2002</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2001</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <tr>
+            <td>2000</td>
+            <td class="subject"><a href="#">COREDAX 신규가입 선착순 1만명에게 시원한 스타벅스 커피 100% 지급~!</a></td>
+            <td>2018-06-12</td>
+        </tr>
+        <!-- //게시물이 있을때 출력 끝 -->
+        </tbody>
+    </table>
+    <!-- //게시판 목록 끝 -->
+
+    <div class="paging"><!-- 게시판 목록 페이징 시작 -->
+        <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_first.png" alt="맨처음으로"></a>
+        <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_prev.png" alt="이전목록"></a>
+        <a href="#" class="on">1</a><!-- 해당 페이지일때 on클래스 붙음-->
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+        <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_next.png" alt="다음목록"></a>
+        <a href="#" class="page_ctrl"><img src="../../assets/images/module/bbs_btn_last.png" alt="맨끝으로"></a> </div>
+    <!-- //게시판 목록 페이징 끝 -->
+
+</div><!-- //게시판 스킨 끝 -->
+
+
+
+<div class="mb80"></div>
+
+
+
+
+<h4 id="noticeView" class="mb50">공지사항 (상세)</h4>
+
+
+<div class="bbs_skin"><!-- 게시판 스킨 시작 -->
+
+    <div class="bbs_view"><!-- 게시판 상세보기 시작 -->
+        <div class="view_head clearfix">
+            <h4>BTC 마켓 코인 추가 (비트튜브 TUBE)</h4>
+            <p class="date">2018.06.12</p>
+        </div>
+        <div class="view_cont">
+            안녕하세요. 코어닥스입니다.
+            6월 5일 부로 비트렉스에서 거래 개시된 다음의 코인이 코어닥스의 BTC 마켓에 추가됩니다.<br>
+            [추가 코인]BitTube (비트튜브 TUBE)<br>
+            비트튜브는 게시자가 광고없이 콘텐츠로 수익을 창출할 수 있는 동영상 플랫폼입니다. 동영상 호스팅 및 배포를 위해 IPFS라는<br>
+            P2P 분산 네트워크를 사용하여 전 세계 사람들이 언론의 자유와 검열을 피할 수 있는 권리를 행사할 수 있게 돕습니다. 비트튜브의<br>
+            총 발행 한도는 10억 개이며, 공동채굴의 수익은 플랫폼에서 콘텐츠가 소비될 때 시청자와 저작권 보유자에게 전달됩니다.<br>
+            홈페이지: https://coin.bit.tube트위터: https://twitter.com/BitTubeApp백서: 비트튜브 백서 보기<br>
+            [대상 마켓]BTC 마켓<br>
+            ✽ PC에서 해당 코인 조회가 안되시는 경우, 새로고침(F5) 클릭 후 확인 부탁드립니다.<br>
+            ✽ 안드로이드, 아이폰에서 혹시 해당 코인 조회가 안되시는 경우, 내정보 > 화면설정 > 코인정보 다시 받기를 클릭 후 확인 부탁드립니다.
+        </div>
+
+        <div class="bbs_btn txt_r"><!-- 게시판 하단 버튼 시작 -->
+            <a href="#" class="md_btn md_white">목록</a>
+        </div><!-- //게시판 하단 버튼 끝 -->
+
+    </div><!-- //게시판 상세보기 끝 -->
+
+</div><!-- //게시판 스킨 끝 -->
+
+
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

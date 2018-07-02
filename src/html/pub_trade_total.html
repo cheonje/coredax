@@ -1,0 +1,920 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="coin_trade trade_total"><!-- 코인거래 주문종합 시작 -->
+
+    <div class="clearfix mb25">
+        <select name="" id="" class="w260 fl">
+            <option>코인선택</option>
+            <option value="" selected="selected">비트코인 BTC/KRW</option>
+            <option value="">비트코인캐시 BTC/KRW</option>
+            <option value="">비트코인골드 BTC/KRW</option>
+        </select>
+
+        <ul class="btn_tab fr">
+            <li class="on"><button type="button">차트</button></li>
+            <li><button type="button">깊이차트</button></li>
+        </ul>
+    </div>
+
+    <ul class="chart_box mb60">
+        <li>
+            <div class="chart">차트</div>
+            <a href="#" class="chart_toggle">차트닫기</a>
+        </li>
+        <li class="hide">
+            <div class="chart">깊이차트</div>
+            <a href="#" class="chart_toggle">차트닫기</a>
+        </li>
+    </ul>
+
+
+    <div class="total_cont clearfix mb60">
+        <div class="fl">
+            <ul class="gray_tab">
+                <li class="on"><button type="button">현재가</button></li>
+                <li><button type="button">시간대별 체결</button></li>
+            </ul>
+
+            <dl class="coin_ty_box clearfix">
+                <dt><span>비트코인</span><br>BTC/KRW</dt>
+                <dd class="t_red"><!-- 상승일때 t_red 클래스 추가, 하락일때 t_blue -->
+                    <span class="price">9,000,000</span> <span class="unit">KRW</span>▲8,000 0.01%</dd>
+            </dl>
+
+            <ul class="coin_time_table clearfix">
+                <li>
+                    <dl class="coin_info_box clearfix">
+                        <dt>시가</dt>
+                        <dd>8,000,000</dd>
+                        <dt>고가</dt>
+                        <dd>8,000,000</dd>
+                        <dt>저가</dt>
+                        <dd>8,000,000</dd>
+                        <dt class="w85">거래량</dt>
+                        <dd class="w160">5.31340427 BTC</dd>
+                        <dt class="w90">거래대금</dt>
+                        <dd class="w160">42,505,677</dd>
+                    </dl>
+                    <div class="fl">
+                        <table class="current_tb"><!-- 코인현재가 테이블 -->
+                            <caption>
+                                코인현재가
+                                코인현재가 정보를 제공하며 매도잔량, 현재가 순으로 구성되어 있습니다.
+                            </caption>
+
+                            <colgroup>
+                                <col style="width: 122px;">
+                                <col style="width: 123px;">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">매도잔량</th>
+                                <th scope="col">현재가</th>
+                            </tr>
+                            </thead>
+                            <tbody><!-- 매도잔량 및 현재가 -->
+                            <tr>
+                                <td class="bg_sky">22.78594913</td>
+                                <td class="bg_sky">8,006,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_sky">3.24844273</td>
+                                <td class="bg_sky">8,005,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_sky">5.17050226</td>
+                                <td class="bg_sky">8,004,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_sky">7.12220115</td>
+                                <td class="bg_sky">8,003,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_sky">6.10973433</td>
+                                <td class="bg_sky">8,002,000</td>
+                            </tr>
+                            </tbody><!-- //매도잔량 및 현재가 -->
+                            <tbody><!-- 매수잔량 및 현재가 -->
+                            <tr>
+                                <td class="bg_pink">78.01007934</td>
+                                <td class="bg_pink">7,994,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_pink">65.32434505</td>
+                                <td class="bg_pink">7,993,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_pink">75.01592361</td>
+                                <td class="bg_pink">7,992,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_pink">66.04269828</td>
+                                <td class="bg_pink">7,991,000</td>
+                            </tr>
+                            <tr>
+                                <td class="bg_pink">70.53848856</td>
+                                <td class="bg_pink">7,990,000</td>
+                            </tr>
+                            </tbody><!-- //매수잔량 및 현재가 -->
+                            <tfoot>
+                            <tr>
+                                <th>매수잔량</th>
+                                <td></td>
+                            </tr>
+                            </tfoot>
+                        </table><!-- //코인현재가 테이블 -->
+                    </div>
+                    <div class="fl">
+                        <table class="current_tb conclude"><!-- 체결현황 테이블 -->
+                            <caption>
+                                체결현황
+                                체결현황 정보를 제공하며 체결현황 순으로 구성되어 있습니다.
+                            </caption>
+
+                            <colgroup>
+                                <col style="width: 125px;">
+                                <col style="width: 125px">
+                                <col>
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th colspan="2" scope="col">체결현황</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.95829551</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00579900</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.03590549</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00894300</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00957300</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00674700</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00738300</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00375900</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00610100</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.04232940</td>
+                            </tr>
+                            <tr>
+                                <td class="t_red">8,001,000</td>
+                                <td class="t_red">▲0.00402700</td>
+                            </tr>
+                            </tbody>
+                        </table><!-- //체결현황 테이블 -->
+                    </div>
+                </li>
+                <li class="hide"><!-- 코인현재가 시간대별 -->
+                    <table class="current_tb2">
+                        <caption>
+                            코인현재가 시간대별 체결정보
+                            코인현재가 시간대별 체결정보 정보를 제공하며 시각, 가격, 체결량 순으로 구성되어 있습니다.
+                        </caption>
+
+                        <colgroup>
+                            <col style="width: 115px;">
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">시각</th>
+                            <th scope="col">가격</th>
+                            <th scope="col">거래량</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>11,988,000</td>
+                            <td class="t_sky">▼0.70236503</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>11,988,000</td>
+                            <td class="t_sky">▼0.28763491</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.17 06:04:55</td>
+                            <td>11,988,000</td>
+                            <td class="t_sky">▼0.05330564</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.17 06:04:55</td>
+                            <td>11,988,000</td>
+                            <td class="t_sky">▼0.02369436</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:55</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.00285400</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:50</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.00407100</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:45</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.00104100</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:40</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.29087421</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:40</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.09100870</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:40</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.14935565</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:40</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.46938605</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:35</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.00627800</td>
+
+                        </tr>
+                        <tr>
+                            <td>05.16 16:43:30</td>
+                            <td class="t_red">11,988,000</td>
+                            <td class="t_sky">▼0.01000000</td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <div class="fr">
+            <ul class="blue_tab mb30">
+                <li class="on"><button type="button">매수</button></li>
+                <li><button type="button">매도</button></li>
+                <li><button type="button">정정취소</button></li>
+            </ul>
+            <ul class="blue_tab_cont">
+                <li>
+                    <dl class="tab_inp clearfix">
+                        <dt>지정가</dt>
+                        <dd>
+                            <select name="" id="" class="w165 mr5">
+                                <option>지정가</option>
+                                <option value="" selected="selected"></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="w103">
+                                <option>현재가%</option>
+                                <option value="" selected="selected"></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </dd>
+                        <dt>가격</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                        <dt>수량</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                    </dl>
+                    <div class="progress"><!-- 1단계가 끝나면 pr25 클래스 추가, pr50, pr75, pr50, pr100 단계적 클래스 추가 -->
+                        <span class="p0">0%</span>
+                        <span class="p50">50%</span>
+                        <span class="p100">100%</span>
+                    </div>
+                    <dl class="tab_inp clearfix mb10">
+                        <dt>금액</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                    </dl>
+                    <dl class="total_info clearfix">
+                        <dt>주문가능금액</dt>
+                        <dd><span>1,200,000</span> KRW</dd>
+                        <dt>최소주문가능수량</dt>
+                        <dd><span>0.0001</span> BTC</dd>
+                        <dt>수수료</dt>
+                        <dd><span>1,000</span> KRW</dd>
+                    </dl>
+                    <div class="lastBtn">
+                        <a href="#" class="md_btn md_red w250 mr5">매수</a>
+                        <a href="#" class="md_btn md_gray del">지움</a>
+                    </div>
+                </li>
+                <li class="hide">
+                    <dl class="tab_inp clearfix">
+                        <dt>지정가</dt>
+                        <dd>
+                            <select name="" id="" class="w165 mr5">
+                                <option>지정가</option>
+                                <option value="" selected="selected"></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                            <select name="" id="" class="w103">
+                                <option>현재가%</option>
+                                <option value="" selected="selected"></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </dd>
+                        <dt>가격</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                        <dt>수량</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                    </dl>
+                    <div class="progress"><!-- 1단계가 끝나면 pr25 클래스 추가, pr50, pr75, pr50, pr100 단계적 클래스 추가 -->
+                        <span class="p0">0%</span>
+                        <span class="p50">50%</span>
+                        <span class="p100">100%</span>
+                    </div>
+                    <dl class="tab_inp clearfix mb10">
+                        <dt>금액</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                    </dl>
+                    <dl class="total_info clearfix">
+                        <dt>주문가능금액</dt>
+                        <dd><span>1,200,000</span> KRW</dd>
+                        <dt>최소주문가능수량</dt>
+                        <dd><span>0.0001</span> BTC</dd>
+                        <dt>수수료</dt>
+                        <dd><span>1,000</span> KRW</dd>
+                    </dl>
+                    <div class="lastBtn">
+                        <a href="#" class="md_btn w250 mr5">매도</a>
+                        <a href="#" class="md_btn md_gray del">지움</a>
+                    </div>
+                </li>
+                <li class="hide">
+                    <dl class="tab_inp clearfix">
+                        <dt class="w100">원주문번호</dt>
+                        <dd><input type="text" name="" id="" class="w230"></dd>
+                        <dt>가격</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                        <dt>수량</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                    </dl>
+                    <div class="progress"><!-- 1단계가 끝나면 pr25 클래스 추가, pr50, pr75, pr50, pr100 단계적 클래스 추가 -->
+                        <span class="p0">0%</span>
+                        <span class="p50">50%</span>
+                        <span class="p100">100%</span>
+                    </div>
+                    <dl class="tab_inp clearfix mb10">
+                        <dt>금액</dt>
+                        <dd><input type="text" name="" id="" class="w195"><a href="#" class="plus">+</a><a href="#" class="minus">-</a></dd>
+                    </dl>
+                    <dl class="total_info clearfix">
+                        <dt>주문가능금액</dt>
+                        <dd><span>1,200,000</span> KRW</dd>
+                        <dt>최소주문가능수량</dt>
+                        <dd><span>0.0001</span> BTC</dd>
+                        <dt>수수료</dt>
+                        <dd><span>1,000</span> KRW</dd>
+                    </dl>
+                    <div class="lastBtn">
+                        <a href="#" class="md_btn md_green w120 mr5">정정</a>
+                        <a href="#" class="md_btn md_white w120 mr5">취소</a>
+                        <a href="#" class="md_btn md_gray del">지움</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <ul class="line_tab mb30"><!-- 라인탭 -->
+        <li class="on"><button type="button">미체결</button></li>
+        <li><button type="button">체결내역</button></li>
+        <li><button type="button">잔고</button></li>
+    </ul><!-- //라인탭 -->
+
+    <ul class="coin_trend_list">
+        <li>
+            <div class="schBox clearfix">
+                <ul class="radio_list clearfix fl">
+                    <li><input type="radio" name="" id="" checked><label for=""><span></span>전체</label></li>
+                    <li><input type="radio" name="" id=""><label for=""><span></span>체결</label></li>
+                    <li><input type="radio" name="" id=""><label for=""><span></span>미체결</label></li>
+                </ul>
+                <select name="" id="" class="w125 mr20">
+                    <option>코인선택</option>
+                    <option value="" selected="selected">비트코인</option>
+                    <option value="">비트코인캐시</option>
+                    <option value="">비트코인골드</option>
+                </select>
+                <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+            </div>
+
+            <table class="basic_cc">
+                <caption>
+                    체결내역
+                    체결내역을 제공하며 주문일시, 주문번호, 구분, 유형, 코인명, 주문가격, 주문수량, 미체결량, 체결량 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 130px;">
+                    <col>
+                    <col style="width: 48px;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">주문일시</th>
+                    <th scope="col">주문번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">유형</th>
+                    <th scope="col" colspan="2">코인명</th>
+                    <th scope="col">주문가격</th>
+                    <th scope="col">주문수량</th>
+                    <th scope="col">미체결량</th>
+                    <th scope="col">체결량</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </li>
+        <li class="hide">
+
+            <div class="schBox clearfix">
+                <ul class="radio_list clearfix fl">
+                    <li><input type="radio" name="" id="" checked><label for=""><span></span>전체</label></li>
+                    <li><input type="radio" name="" id=""><label for=""><span></span>체결</label></li>
+                    <li><input type="radio" name="" id=""><label for=""><span></span>미체결</label></li>
+                </ul>
+                <ul class="radio_list clearfix fl">
+                    <li><input type="radio" name="" id="" checked><label for=""><span></span>전체</label></li>
+                    <li><input type="radio" name="" id=""><label for=""><span></span>매수</label></li>
+                    <li><input type="radio" name="" id=""><label for=""><span></span>매도</label></li>
+                </ul>
+                <select name="" id="" class="w125 mr20">
+                    <option>코인선택</option>
+                    <option value="" selected="selected">비트코인</option>
+                    <option value="">비트코인캐시</option>
+                    <option value="">비트코인골드</option>
+                </select>
+                <input type="text" name="" id="" readonly="readonly" value="2018.05.30" class="date w120"> - <input type="text" name="" id="" readonly="readonly" value="2018.05.30" class="date w120"> <a href="#" class="mn_btn mn_gray">다음</a>
+                <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+            </div>
+
+            <table class="basic_cc">
+                <caption>
+                    체결내역
+                    체결내역을 제공하며 주문일시, 주문번호, 구분, 유형, 코인명, 주문가격, 주문수량, 미체결량, 체결량 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 130px;">
+                    <col>
+                    <col style="width: 48px;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">주문일시</th>
+                    <th scope="col">주문번호</th>
+                    <th scope="col">구분</th>
+                    <th scope="col">유형</th>
+                    <th scope="col" colspan="2">코인명</th>
+                    <th scope="col">주문가격</th>
+                    <th scope="col">주문수량</th>
+                    <th scope="col">미체결량</th>
+                    <th scope="col">체결량</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                <tr>
+                    <td>2018.05.30 00:15</td>
+                    <td>1234</td>
+                    <td class="t_red">매도</td>
+                    <td>지정가</td>
+                    <td class="txt_l">비트코인골드</td>
+                    <td>BTG/BTC</td>
+                    <td class="txt_r">01.0015101</td>
+                    <td class="txt_r">2.0015101</td>
+                    <td class="txt_r">1.0015101</td>
+                    <td class="txt_r">1.000000</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </li>
+        <li class="hide">
+            <div class="schBox last">
+                <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+            </div>
+            <table class="basic_cc cr mb20">
+                <caption>
+                    잔고
+                    잔고 정보를 제공하며 현금, 매입금, 평가금, 추정자산, 평가손익, 손익률 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 16.66%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">현금</th>
+                    <th scope="col">매입금</th>
+                    <th scope="col">평가금</th>
+                    <th scope="col">추정자산</th>
+                    <th scope="col">평가손익</th>
+                    <th scope="col">손익률</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="fw4">99.757.922</td>
+                    <td>100.757.922</td>
+                    <td>100.757.922</td>
+                    <td>100.757.922</td>
+                    <td>100.757.922</td>
+                    <td>100.757.922</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="basic_cc cr gr mb20">
+                <caption>
+                    잔고
+                    잔고 정보를 제공하며 코인명, 평가손익, 손익률, 보유수량, 가능수량, 평균매입가, 현재가 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 16.66%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">코인명</th>
+                    <th scope="col">평가손익</th>
+                    <th scope="col">손익률</th>
+                    <th scope="col">보유수량</th>
+                    <th scope="col">가능수량</th>
+                    <th scope="col">평균매입가</th>
+                    <th scope="col">현재가</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>비트코인골드</td>
+                    <td class="t_red">47,922</td>
+                    <td class="t_red">50.75%</td>
+                    <td>0.01100000</td>
+                    <td>0.01100000</td>
+                    <td>7,960.000</td>
+                    <td class="t_red">12,000,000</td>
+                </tr>
+                <tr>
+                    <td>비트코인</td>
+                    <td class="t_sky">-47,922</td>
+                    <td class="t_sky">-2.75%</td>
+                    <td>0.01100000</td>
+                    <td>0.01100000</td>
+                    <td>480,000</td>
+                    <td class="t_sky">480,000</td>
+                </tr>
+                <tr>
+                    <td>비트코인</td>
+                    <td>47,922</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>비트코인골드</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>비트코인</td>
+                    <td>47,922</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>비트코인골드</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <script type="text/javascript">
+        //챠트 show/hide
+        $('.btn_tab > li > button').click(function(){
+            var tabIdx = $(this).parent().index();
+            $('.btn_tab > li').removeClass('on');
+            $(this).parent().addClass('on');
+            $('.chart_box > li').hide().eq(tabIdx).show();
+            return false;
+        });
+
+        //차트 토글
+        $('.chart_toggle').click(function(){
+            if($(this).hasClass('close')){
+                $(this).prev('div').slideDown(200);
+                $(this).text('차트닫기').removeClass('close');
+            }else{
+                $(this).prev('div').slideUp(200);
+                $(this).text('차트열기').addClass('close');
+            }
+
+        });
+
+        //현재가, 시간대별 show/hide
+        $('.gray_tab > li > button').click(function(){
+            var tabIdx = $(this).parent().index();
+            $('.gray_tab > li').removeClass('on');
+            $(this).parent().addClass('on');
+            $('.coin_time_table > li').hide().eq(tabIdx).show();
+            return false;
+        });
+
+        //매수, 매도, 정정 show/hide
+        $('.blue_tab > li > button').click(function(){
+            var tabIdx = $(this).parent().index();
+            $('.blue_tab > li').removeClass('on');
+            $(this).parent().addClass('on');
+            $('.blue_tab_cont > li').hide().eq(tabIdx).show();
+            return false;
+        });
+
+        //미체결, 체결, 잔고 show/hide
+        $('.line_tab > li > button').click(function(){
+            var tabIdx = $(this).parent().index();
+            $('.line_tab > li').removeClass('on');
+            $(this).parent().addClass('on');
+            $('.coin_trend_list > li').hide().eq(tabIdx).show();
+            return false;
+        });
+    </script>
+
+</div><!-- //코인거래 주문종합 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

@@ -1,0 +1,51 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="mypage opt_regist"><!-- 마이페이지 OTP 등록하기 시작 -->
+
+    <p class="page_head_txt">OTP를 등록하시면 <span class="fw7">로그인 및 출금 시에 OTP 인증</span>을 거치게 되고 <span class="fw7">입출금 한도가 상향</span>됩니다.<br>
+        OTP를 등록하시려면 본인확인을 위해 이메일 인증 후 등록이 가능합니다.<br>
+        해킹 등으로부고객님의 자산을 보호하기 위해 <span class="fw7">OTP 등록 후 24시간 동안 출금이 제한</span>됩니다.
+    </p>
+
+    <h4><em>1</em>이메일 인증</h4>
+    <div class="clearfix mb60">
+        <p class="tb_head_txt fl">본인확인을 위해 고객님이 등록하신 이메일 주소로 인증  메일을 발송합니다.</p>
+        <a href="#" class="md_btn fr">이메일 인증</a>
+        <!--a href="#" class="md_btn fr email">이메일 인증 완료</a><!-- 인증완료시 email 클래스 추가 -->
+    </div>
+
+    <h4><em>2</em>2FA(구글 OTP) 앱 설치</h4>
+    <p class="tb_head_txt mb20">고객님의 휴대기기 OS 버전에 맞는 2FA(구글 OTP)앱을 다운로드 받아 설치하세요.</p>
+    <div class="otp_app purple_radius clearfix mb60">
+        <dl class="play_st">
+            <dt>안드로이드</dt>
+            <dd>플레이스토어에서 'Google OTP'로 검색</dd>
+        </dl>
+        <dl class="app_st">
+            <dt>IOS (아이폰)</dt>
+            <dd>앱스토어에서 'Google Authenticator'로 검색</dd>
+        </dl>
+    </div>
+
+    <h4><em>3</em>QR코드 스캔 또는 16자리 코드번호 입력</h4>
+    <p class="tb_head_txt mb20">고객님의 휴대기기에 설치한 2FA(구글 OTP) 앱을 실행시킨 후, '바코드스캔'을 선택하여 아래에 표시된 QR코드를 휴대기기로 스캔하거나<br>
+        '제공된 키 입력'을 선택하여 16자리 코드번호를 직접 입력합니다.</p>
+    <div class="otp_app purple_radius clearfix mb60">
+        <p class="fl qr_code"><img src="../../assets/images/module/otp_qr.png" alt="QR코드 이미지"></p>
+        <dl class="fl code_input">
+            <dt class="mb10">코드번호(16자리)</dt>
+            <dd><input type="text" name="" id="" maxlength="16" class="w470"></dd>
+        </dl>
+    </div>
+
+
+    <h4><em>4</em>2FA(구글 OTP앱) 인증코드 입력</h4>
+    <p class="tb_head_txt mb20">등록된 2FA(구글 OTP)앱을 통해 생성된 6자리 인증 코드 번호를 입력하세요.</p>
+    <input type="text" name="" id="" maxlength="6" placeholder="생성된 6자리 인증코드를 입력하세요." class="confirmCode w470 mr8">
+    <a href="#" class="md_btn">인증확인</a>
+
+</div><!-- //마이페이지 OTP 등록하기 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

@@ -1,0 +1,95 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="mypage leave"><!-- 마이페이지 회원탈퇴 시작 -->
+
+    <p class="page_head_txt">
+        회원 탈퇴를 하시면 고객님의 모든 개인정보가 삭제, 폐기되어 복구가 불가능합니다.<br>
+        (단, 관계법령에 따라 회사가 보관하여야 하는 정보는 일정 기간 보관됩니다.)<br>
+        고객님의 계좌에 잔고가 남아있거나, 주문내역에 취소되지 않은 주문이 있을 경우 회원탈퇴가 진행되지 않습니다.
+    </p>
+
+    <h4 class="mb15">잔고현황</h4>
+    <p class="tb_head_txt mb20">잔고를 모두 출금하시고 회원 탈퇴를 진행하세요.</p>
+
+    <ul class="unline_table mb60">
+        <li>
+            <dl>
+                <dt>예수금</dt>
+                <dd><input type="text" readonly="readonly" class="w360 mr8"><a href="#" class="md_btn md_white">출금</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>코인잔고</dt>
+                <dd><input type="text" readonly="readonly" class="w360 mr8"><a href="#" class="md_btn md_white">출금</a></dd>
+                <dd><input type="text" readonly="readonly" class="w360"></dd>
+            </dl>
+        </li>
+    </ul>
+
+
+
+    <h4>주문현황</h4>
+    <div class="clearfix mb10">
+        <p class="tb_head_txt fl pt15">주문을 모두 취소하시고 회원 탈퇴를 진행하세요.</p>
+        <a href="#" class="md_btn md_white6 fr">주문취소</a>
+    </div>
+
+    <table class="basic_cc">
+        <caption>
+            주문현황
+            주문현황 정보를 제공하며 주문일시, 주문번호, 구분, 코인명, PAIR, 주문가격, 주문수량 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 145px;">
+            <col style="width: 95px;">
+            <col style="width: 95px;">
+            <col style="width: 145px;">
+            <col style="width: 95px;">
+            <col style="width: 145px;">
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">주문일시</th>
+            <th scope="col">주문번호</th>
+            <th scope="col">구분</th>
+            <th scope="col">코인명</th>
+            <th scope="col">PAIR</th>
+            <th scope="col">주문가격</th>
+            <th scope="col">주문수량</th>
+
+        </thead>
+        <tbody>
+        <tr>
+            <td>2018/05/17 00:15</td>
+            <td>1234</td>
+            <td class="fw7 t_red">매수</td><!-- 매도 일때 t_sky 클래스, 매수 일때 t_red 클래스 -->
+            <td>비트코인골드</td>
+            <td>BTG/BTC</td>
+            <td class="txt_r">0.12340010</td>
+            <td class="txt_r fw7">2.0015101</td>
+        </tr>
+        <tr>
+            <td>2018/05/17 00:15</td>
+            <td>1200</td>
+            <td class="fw7 t_sky">매도</td><!-- 매도 일때 t_sky 클래스, 매수 일때 t_red 클래스 -->
+            <td>비트코인</td>
+            <td>BTC/KRW</td>
+            <td class="txt_r">9,010,000</td>
+            <td class="txt_r fw7">1.05</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="btnArea">
+        <a href="#" class="large_btn">회원 탈퇴하기</a>
+    </div>
+
+
+</div><!-- //마이페이지 회원탈퇴 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

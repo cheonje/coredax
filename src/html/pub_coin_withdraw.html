@@ -1,0 +1,110 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="assets_manage"><!-- 자산관리 코인출금 시작 -->
+
+    <p class="page_head_txt">
+        가상화폐 특성상 출금 신청이 완료되면 출금을 취소할 수 없습니다.<br>
+        출금하기 전 보내는 출금 주소 등 출금정보를 다시 한번 꼭 확인하시기 바랍니다.
+    </p>
+
+    <h4 class="mb20">코인 출금 정보</h4>
+    <ul class="unline_table mb60">
+        <li>
+            <dl>
+                <dt>출금코인</dt>
+                <dd>
+                    <select name="" id="" class="w260 h40">
+                        <option>코인선택</option>
+                        <option value="" selected="selected">비트코인</option>
+                        <option value="">비트코인캐시</option>
+                        <option value="">비트코인골드</option>
+                        <option value="">이더리움</option>
+                        <option value="">이더리움클래식</option>
+                        <option value="">라이트코인</option>
+                        <option value="">리플</option>
+                    </select>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>출금주소</dt>
+                <dd><input type="text" class="w360 mr8"><a href="#" class="md_btn">코인주소록</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>태그</dt>
+                <dd><input type="text" class="w500"></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <h4 class="mb20">출금 금액 설정</h4>
+    <ul class="unline_table mb15">
+        <li>
+            <dl>
+                <dt>계좌번호</dt>
+                <dd><input type="text" readonly="readonly" value="1010100000001" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>계좌비밀번호</dt>
+                <dd><input type="password" class="w180"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>출금가능수량</dt>
+                <dd><input type="text" readonly="readonly" value="11.10263645 BTC" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>최소출금가능수량</dt>
+                <dd><input type="text" readonly="readonly" value="0.011 BTC" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>출금수량</dt>
+                <dd><input type="text" class="w360 mr8"><a href="#" class="md_btn">전액</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>수수료</dt>
+                <dd><input type="text" readonly="readonly" value="0.001 BTC" class="w360 mr8"><a href="#" class="md_btn md_white">수수료안내</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>수수료</dt>
+                <dd>
+                    <span class="fw7 mr23">1회</span><input type="text" readonly="readonly" value="20,000,000원" class="w130 mr8">
+                    <span class="fw7 mr23">1일</span><input type="text" readonly="readonly" value="50,000,000원" class="w130 mr8"><a href="#" class="md_btn md_white">출금한도안내</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt style="line-height: 20px;">총 출금액<br><span class="f13">(수수료포함)</span></dt>
+                <dd><input type="text" readonly="readonly" value="0.951 BTC" class="w360 mr8"><a href="#" class="md_btn">출금하기</a></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <ul class="li_tx">
+        <li>가상화폐를 출금하시면 블록체인 네트워크를 통해 처리되며 평균 30분 ~ 1시간 정도의 시간이 소요될 수 있습니다.</li>
+        <li>거래소 계좌에 원화를 <span class="fw7">최초 입금하시면 72시간 동안 원화 및 코인출금이 제한</span>됩니다.</li>
+    </ul>
+
+
+
+
+
+</div><!-- //자산관리 코인출금 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

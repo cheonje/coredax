@@ -1,0 +1,74 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="mypage"><!-- 마이페이지 본인신분확인 시작 -->
+    <p class="page_head_txt">
+        보안 등급을 4단계로 올리시려면 본인 신분 확인을 하셔야 합니다.<br>
+        본인 신분확인은 비대면 본인확인을 위해 필수적인 절차이오니 고객님들의 양해 바랍니다.
+    </p>
+
+    <h4>필요서류안내</h4>
+    <ul class="identify_guide mb60">
+        <li>
+            <div><img src="../../assets/images/module/id_card_img01.png" alt="본인 신분증 확인 예시 이미지"></div>
+            <div class="identify_txt">
+                <div>
+                    <h5>본인 신분증</h5>
+                    <p class="mb25">본인 신분증에 예시와 같이 <span class="t_red">목적, 요청 날짜를 작성하여 부착</span><br>
+                        후 찍은 사진을 올려주세요.<br>
+                        개인정보 보호를 위해 주민등록번호 뒤 7자리, 운전면허 번호,<br>
+                        여권번호는 모두 가려주세요.</p>
+
+                    <p>※ 신분증은 주민등록증, 운전면허증, 여권만 가능합니다.</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div><img src="../../assets/images/module/id_card_img02.png" alt="신분증을 든 본인 사진 확인 예시 이미지"></div>
+            <div class="identify_txt">
+                <div>
+                    <h5>신분증을 든 본인 사진</h5>
+                    <p class="mb25">온라인 접수 시 비대면 본인확인을 위해 사용됩니다.<br>
+                        목적, 요청 날짜를 부착한 신분증을 들고 본인의 얼굴이 나오도록<br>
+                        사진을 찍어 올려주세요.</p>
+
+                    <p>※ 신분증 글씨(부착 메모 포함)를 읽을 수 있어야 합니다.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+    <h4>파일 업로드</h4>
+    <ul class="unline_table">
+        <li>
+            <dl>
+                <dt>본인신분증</dt>
+                <dd>
+                    <input type="text" readonly="readonly" class="fileName w460 mr8">
+                    <label for="uploadBtn" class="md_btn md_white">파일첨부</label>
+                    <input type="file" id="uploadBtn">
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>본인사진</dt>
+                <dd>
+                    <input type="text" readonly="readonly" class="fileName w460 mr8">
+                    <input type="file" id="uploadBtn">
+                    <label for="uploadBtn" class="md_btn md_white">파일첨부</label>
+                </dd>
+            </dl>
+            <p class="add_txt">파일 확장자는 jpg, png, gif만 가능합니다.(파일 제한 용량 : 5M)</p>
+        </li>
+    </ul>
+
+    <div class="btnArea">
+        <a href="#" class="large_btn">신청하기</a>
+    </div>
+
+</div><!-- //마이페이지 본인신분확인 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

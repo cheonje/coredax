@@ -1,0 +1,361 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="mb50 h100">
+
+    <p class="mb20">
+        *div class="modal" style="display: block;">*!-- 모달팝업 s -->
+        ...
+        */div>*!-- //모달팝업 e -->
+        <br>부분을 사용하시면 됩니다.
+    </p>
+    <p class="t_red">※ *는 < 입니다.</p>
+    <p class="t_red">※ style="display: block;" 를 지우고 사용하세요.</p>
+</div>
+
+
+<div class="mb50 h500">
+    <h4 id="wonDeposit" class="mb20">원화 입금 신청</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">원화 입금 신청</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt">입금 신청 후 20분 이내에 거래소 계좌로 입금을 완료하세요.<br>
+                    은행에서 거래소 계좌로 입금 시 아래 적요코드를 꼭 입력하셔야 입금 처리가 가능합니다.<br>
+                    <span class="fw7">적요코드 미 입력 시 입금 처리에 24시간 이상 소요</span>될 수 있습니다.</p>
+                <dl class="clearfix large">
+                    <dt>입금금액</dt>
+                    <dd><input type="text" name="" id="" value="100,000,000원" readonly="readonly" class="w100p"></dd>
+                    <dt>필수 적요코드</dt>
+                    <dd><input type="text" name="" id="" value="홍길동123" readonly="readonly" class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">저장</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+<div class="mb50 h500">
+    <h4 id="coinCancle" class="mb20">코인 출금 취소</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">코인출금을 취소하시겠습니까?</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <dl class="clearfix large">
+                    <dt>코인명</dt>
+                    <dd><input type="text" name="" id="" value="이더리움" readonly="readonly" class="w100p"></dd>
+                    <dt>수량</dt>
+                    <dd><input type="text" name="" id="" value="11.24000000" readonly="readonly" class="w100p"></dd>
+                </dl>
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn">출금취소</a><a href="#" class="md_btn md_white">닫기</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+
+<div class="mb50" style="height: 950px;">
+    <h4 id="withdrawLimit" class="mb20">출금 한도 안내</h4>
+
+    <div class="modal m_w780" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box big_tb">
+            <p class="pop_tit">출금 한도 안내</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt mb30">고객 보안등급별로 출금한도가 차등적용되며, 가상화폐의 경우 전일종가를 기준으로 원화 출금한도를 적용합니다.</p>
+                <table class="basic_cc cr">
+                    <caption>
+                        출금 한도 안내
+                        출금 한도 정보를 제공하며 보안등급, 1등급, 2등급, 3등급, 4등급의 입금, 출금 항목 순으로 구성되어 있습니다.
+                    </caption>
+
+                    <colgroup>
+                        <col style="width: 46px;">
+                        <col style="width: 120px;">
+                        <col style="width: 46px;">
+                        <col style="width: 120px;">
+                        <col style="width: 120px;">
+                        <col style="width: 120px;">
+                        <col style="width: 120px;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="3" rowspan="2" scope="col">보안등급</th>
+                        <th scope="col">1등급</th>
+                        <th scope="col">2등급</th>
+                        <th scope="col">3등급</th>
+                        <th scope="col">4등급</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">휴대폰본인인증</th>
+                        <th scope="col">본인계좌등록</th>
+                        <th scope="col">구글OTP인증</th>
+                        <th scope="col">본인신분확인</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="2" scope="row">입금</th>
+                        <th scope="row">원화(KRW)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>무제한</td>
+                        <td>무제한</td>
+                        <td>무제한</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">가상화폐</th>
+                        <th scope="row">1일</th>
+                        <td>무제한</td>
+                        <td>무제한</td>
+                        <td>무제한</td>
+                        <td>무제한</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="16" scope="row">출금</th>
+                        <th scope="row" rowspan="2">원화<br>(KRW)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>10,000,000</td>
+                        <td>20,000,000</td>
+                        <td>50,000,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>20,000,000</td>
+                        <td>50,000,000</td>
+                        <td>200,000,000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">비트코인<br>(BTC)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>2</td>
+                        <td>5</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">비트코인캐시<br>(BCH)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>9</td>
+                        <td>19</td>
+                        <td>49</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>19</td>
+                        <td>49</td>
+                        <td>198</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">비트코인골드<br>(BTG)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>144</td>
+                        <td>289</td>
+                        <td>724</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>289</td>
+                        <td>724</td>
+                        <td>2,898</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">이더리움<br>(ETH)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>14</td>
+                        <td>29</td>
+                        <td>74</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>29</td>
+                        <td>74</td>
+                        <td>298</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">이더리움클래식<br>(ETC)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>505</td>
+                        <td>1,010</td>
+                        <td>2,526</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>1,010</td>
+                        <td>2,526</td>
+                        <td>10,106</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">리플<br>(XRP)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>13,210</td>
+                        <td>26,420</td>
+                        <td>66,050</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>26,420</td>
+                        <td>66,050</td>
+                        <td>264,200</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">라이트코인<br>(LTC)</th>
+                        <th scope="row">1회</th>
+                        <td>-</td>
+                        <td>55</td>
+                        <td>111</td>
+                        <td>278</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1일</th>
+                        <td>-</td>
+                        <td>111</td>
+                        <td>278</td>
+                        <td>1,113</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+
+<div class="mb50" style="height: 950px;">
+    <h4 id="chargeGuide" class="mb20">수수료 안내</h4>
+
+    <div class="modal m_w780" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box big_tb">
+            <p class="pop_tit">수수료 안내</p><!-- 제목 -->
+            <div class="pop_cont line">
+                <p class="add_txt mb30">고객 보안등급별로 출금한도가 차등적용되며, 가상화폐의 경우 전일종가를 기준으로 원화 출금한도를 적용합니다.</p>
+                <table class="basic_cc">
+                    <caption>
+                        수수료 안내
+                        수수료 정보를 제공하며 보안등급, 일반, 1등급, 2등급, 3등급, 4등급의 거래수수료율, 출금수수료 항목 순으로 구성되어 있습니다.
+                    </caption>
+
+                    <colgroup>
+                        <col style="width: 85px;">
+                        <col style="width: 130px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th colspan="2" rowspan="2" scope="col">보안등급</th>
+                        <th scope="col">일반</th>
+                        <th scope="col">1등급</th>
+                        <th scope="col">2등급</th>
+                        <th scope="col">3등급</th>
+                        <th scope="col">4등급</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>1억이상</td>
+                        <td>10억이상</td>
+                        <td>30억이상</td>
+                        <td>100억이상</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th rowspan="2" scope="row">거래<br>수수료율</th>
+                        <th scope="row">MAKER</th>
+                        <td>0.04%</td>
+                        <td>0.03%</td>
+                        <td>0.03%</td>
+                        <td>0.01%</td>
+                        <td>무료</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">TAKER</th>
+                        <td>0.05%</td>
+                        <td>0.04%</td>
+                        <td>0.03%</td>
+                        <td>0.02%</td>
+                        <td>0.01%</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="8" scope="row">출금<br>수수료</th>
+                        <th scope="row">원화<br>(KRW)</th>
+                        <td colspan="5">1,000원</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비트코인<br>(BTC)</th>
+                        <td colspan="5">0.001BTC</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비트코인캐시<br>(BCH)</th>
+                        <td colspan="5">0.001BCH</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">비트코인골드<br>(BTG)</th>
+                        <td colspan="5">0.001BTG</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이더리움<br>(ETH)</th>
+                        <td colspan="5">0.01ETH</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이더리움클래식<br>(ETC)</th>
+                        <td colspan="5">0.01ETC</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">리플<br>(XRP)</th>
+                        <td colspan="5">1XRP</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">라이트코인<br>(LTC)</th>
+                        <td colspan="5">0.01LTC</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

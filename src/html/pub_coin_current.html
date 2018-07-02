@@ -1,0 +1,505 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="coin_trend"><!-- 코인동향 코인현재가 시작 -->
+
+    <div class="trend_top clearfix mb40">
+        <select name="" id="" class="w260 fl">
+            <option>코인선택</option>
+            <option value="" selected="selected">비트코인 BTC/KRW</option>
+            <option value="">비트코인캐시 BCH/KRW</option>
+            <option value="">비트코인골드 BTG/KRW</option>
+            <option value="">이더리움 ETC/KRW</option>
+            <option value="">이더리움클래식 ETC/KRW</option>
+            <option value="">라이트코인 LTC/KRW</option>
+            <option value="">리플 XRP/KRW</option>
+        </select>
+
+        <ul class="btn_tab fr">
+            <li class="on"><a href="#">코인개요</a></li>
+        </ul>
+
+        <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+    </div>
+
+    <div class="trend_cont clearfix">
+        <div class="fl">
+            <dl class="coin_ty_box clearfix">
+                <dt><span>비트코인</span><br>BTC/KRW</dt>
+                <dd class="t_red"><!-- 상승일때 t_red 클래스 추가, 하락일때 t_blue -->
+                    <span class="price">9,000,000</span> <span class="unit">KRW</span><br>
+                    ▲8,000 0.01%</dd>
+            </dl>
+            <dl class="coin_info_box clearfix">
+                <dt>시가</dt>
+                <dd>8,000,000</dd>
+                <dt>고가</dt>
+                <dd>8,000,000</dd>
+                <dt>저가</dt>
+                <dd>8,000,000</dd>
+                <dt class="w80">거래량</dt>
+                <dd class="w140">5.31340427 BTC</dd>
+                <dt class="w80">거래대금</dt>
+                <dd class="w135">42,505,677</dd>
+            </dl>
+
+            <table class="current_tb"><!-- 코인현재가 테이블 -->
+                <caption>
+                    코인현재가
+                    코인현재가 정보를 제공하며 매도잔량, 현재가, 매수잔량 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 110px;">
+                    <col style="width: 110px;">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col">매도잔량</th>
+                    <th scope="col">현재가</th>
+                    <th scope="col">매수잔량</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>3.35244328</td>
+                    <td class="bg_pink">8,007,000</td>
+                    <td rowspan="4"></td>
+                </tr>
+                <tr>
+                    <td>12.68835214</td>
+                    <td class="bg_pink">8,008,000</td>
+                </tr>
+                <tr>
+                    <td>24.74700139</td>
+                    <td class="bg_pink">8,009,000</td>
+                </tr>
+                <tr>
+                    <td>53.15958604</td>
+                    <td class="bg_pink">8,010,000</td>
+                </tr>
+                <tr>
+                    <td>50.81431314</td>
+                    <td class="bg_pink">8,011,000</td>
+                    <td><div class="relative"><span>체결강도</span> 150.17%</div></td>
+                </tr>
+                <tr>
+                    <td>56.78795528</td>
+                    <td class="bg_pink">8,012,000</td>
+                    <td><div class="relative"><span>시가</span> 8,001,000</div></td>
+                </tr>
+                <tr>
+                    <td>41.66928814</td>
+                    <td class="bg_pink">8,013,000</td>
+                    <td rowspan="2"><div class="relative"><span>고가</span> 8,006,000</div></td>
+                </tr>
+                <tr>
+                    <td>41.24518325</td>
+                    <td class="bg_pink">8,014,000</td>
+                </tr>
+                <tr>
+                    <td>35.04220516</td>
+                    <td class="bg_pink">8,015,000</td>
+                    <td rowspan="2"><div class="relative"><span>저가</span> 7,994,000</div></td>
+                </tr>
+                <tr>
+                    <td>34.94733973</td>
+                    <td class="bg_pink">8,016,000</td>
+                </tr>
+                <tr>
+                    <td rowspan="10"></td>
+                    <td class="bg_sky">8,006,000</td>
+                    <td>12.87851288</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">8,002,000</td>
+                    <td>1.77705664</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">8,001,000</td>
+                    <td>0.01935100</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">8,000,000</td>
+                    <td>0.00777400</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">7,999,000</td>
+                    <td>1.00383707</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">7,998,000</td>
+                    <td>0.03282000</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">7,997,000</td>
+                    <td>1.02018423</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">7,996,000</td>
+                    <td>0.02732400</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">7,995,000</td>
+                    <td>3.98231240</td>
+                </tr>
+                <tr>
+                    <td class="bg_sky">7,994,000</td>
+                    <td>9.81293630</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td>354.45366755</td>
+                    <td></td>
+                    <td>30.56210852</td>
+                </tr>
+                </tfoot>
+            </table><!-- //코인현재가 테이블 -->
+        </div>
+
+        <div class="fr">
+            <ul class="gray_tab mb35">
+                <li class="on"><button type="button">시간대별 체결</button></li>
+                <li><button type="button">일자별 체결</button></li>
+            </ul>
+
+            <ul class="coin_time_table">
+                <li><!-- 코인현재가 시간대별 -->
+                    <table class="current_tb2">
+                        <caption>
+                            코인현재가 시간대별 체결정보
+                            코인현재가 시간대별 체결정보 정보를 제공하며 일자, 가격, 거래량, 거래금액 순으로 구성되어 있습니다.
+                        </caption>
+
+                        <colgroup>
+                            <col style="width: 115px;">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">일자</th>
+                            <th scope="col">가격</th>
+                            <th scope="col">거래량</th>
+                            <th scope="col">거래금액</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.1</td>
+                            <td>800,600.0</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.000854</td>
+                            <td>6,837.1</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.001934</td>
+                            <td>15,483.6</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.008187</td>
+                            <td>65,545.1</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.003313</td>
+                            <td>26,523.9</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.006253</td>
+                            <td>50,061.5</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.003826</td>
+                            <td>30,631.0</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.000641</td>
+                            <td>5,131.8</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.002281</td>
+                            <td>18,261.7</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.008646</td>
+                            <td>69,219.9</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.008798</td>
+                            <td>70,436.8</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.005143</td>
+                            <td>41,174.9</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.004466</td>
+                            <td>35,754.8</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.003458</td>
+                            <td>27,684.7</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.008475</td>
+                            <td>67,850.9</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.005447</td>
+                            <td>43,608.7</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.009852</td>
+                            <td>78,875.1</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.005243</td>
+                            <td>41,975.5</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.005301</td>
+                            <td>42,439.8</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.002246</td>
+                            <td>17,981.5</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.00753</td>
+                            <td>60,285.2</td>
+                        </tr>
+                        <tr>
+                            <td>05.17 06:24:55</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">▲0.005006</td>
+                            <td>40,078.0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li><!-- //코인현재가 시간대별 -->
+
+                <li class="hide"><!-- 코인현재가 일자별 -->
+                    <table class="current_tb2">
+                        <caption>
+                            코인현재가 일자별 체결정보
+                            코인현재가 일자별 체결정보 정보를 제공하며 일자, 가격, 거래량, 거래금액 순으로 구성되어 있습니다.
+                        </caption>
+
+                        <colgroup>
+                            <col style="width: 90px;">
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th scope="col">일자</th>
+                            <th scope="col">가격</th>
+                            <th scope="col">거래량</th>
+                            <th scope="col">거래금액</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>18.05.31</td>
+                            <td>8,006,000</td>
+                            <td class="t_red">82.89334890</td>
+                            <td>663,197,055</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.30</td>
+                            <td>8,001,000</td>
+                            <td class="t_red">295.98955719</td>
+                            <td>2,368,052,533</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.29</td>
+                            <td>8,003,000</td>
+                            <td class="t_red">525.39785372</td>
+                            <td>4,203,611,152</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.28</td>
+                            <td>7,671,189</td>
+                            <td class="t_red">5,040,600,000.0</td>
+                            <td>38,667,395,273</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.27</td>
+                            <td>7,950,309</td>
+                            <td class="t_red">4,056,520,000.0</td>
+                            <td>32,250,587,464</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.26</td>
+                            <td>7,936,994</td>
+                            <td class="t_red">4,051,540,000.0</td>
+                            <td>32,157,048,670</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.25</td>
+                            <td>8,071,071</td>
+                            <td class="t_red">4,867,830,000.0</td>
+                            <td>39,288,601,545</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.24</td>
+                            <td>8,186,739</td>
+                            <td class="t_red">6,049,220,000.0</td>
+                            <td>49,523,385,293</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.23</td>
+                            <td>8,181,340</td>
+                            <td class="t_red">6,491,120,000.0</td>
+                            <td>53,106,059,700</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.22</td>
+                            <td>8,728,548</td>
+                            <td class="t_red">5,137,010,000.0</td>
+                            <td>44,838,638,361</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.21</td>
+                            <td>9,137,971</td>
+                            <td class="t_red">5,154,990,000.0</td>
+                            <td>47,106,149,125</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.20</td>
+                            <td>9,211,336</td>
+                            <td class="t_red">5,191,060,000.0</td>
+                            <td>47,816,597,856</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.19</td>
+                            <td>8,923,448</td>
+                            <td class="t_red">4,712,400,000.0</td>
+                            <td>42,050,856,355</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.18</td>
+                            <td>8,927,549</td>
+                            <td class="t_red">5,764,190,000.0</td>
+                            <td>51,460,088,670</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.17</td>
+                            <td>8,749,959</td>
+                            <td class="t_red">4,712,400,000.0</td>
+                            <td>51,296,897,136</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.16</td>
+                            <td>9,050,889</td>
+                            <td class="t_red">5,764,190,000.0</td>
+                            <td>61,186,000,835</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.15</td>
+                            <td>9,165,679</td>
+                            <td class="t_red">5,862,530,000.0</td>
+                            <td>61,462,385,327</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.14</td>
+                            <td>9,322,606</td>
+                            <td class="t_red">6,760,220,000.0</td>
+                            <td>68,653,068,974</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.13</td>
+                            <td>9,308,443</td>
+                            <td class="t_red">6,705,710,000.0</td>
+                            <td>54,606,863,846</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.12</td>
+                            <td>9,074,717</td>
+                            <td class="t_red">7,364,150,000.0</td>
+                            <td>61,902,093,049</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.11</td>
+                            <td>9,007,069</td>
+                            <td class="t_red">5,866,380,000.0</td>
+                            <td>76,456,685,347</td>
+                        </tr>
+                        <tr>
+                            <td>18.05.10</td>
+                            <td>9,695,103</td>
+                            <td class="t_red">6,821,380,000.0</td>
+                            <td>66,961,167,890</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </li><!-- //코인현재가 일자별 -->
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            //시간대별, 일자별 탭 show/hide
+            $('.gray_tab > li > button').click(function(){
+                var tabIdx = $(this).parent().index();
+                $('.gray_tab > li').removeClass('on');
+                $(this).parent().addClass('on');
+                $('.coin_time_table > li').hide().eq(tabIdx).show();
+                return false;
+            });
+        </script>
+
+    </div>
+
+
+
+</div><!-- //코인동향 코인현재가 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

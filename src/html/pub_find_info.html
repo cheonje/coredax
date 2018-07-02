@@ -1,0 +1,108 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+
+<div class="membership">
+
+    <div class="joinForm white970"><!-- 이메일, 접속비밀번호 찾기 s -->
+
+        <ul class="line_tab mb0"><!-- 라인탭 -->
+            <li class="on"><button type="button">이메일 찾기</button></li>
+            <li><button type="button">접속비밀번호 찾기</button></li>
+        </ul><!-- //라인탭 -->
+
+        <ul class="find_cont">
+
+            <li><!-- 이메일 찾기 -->
+                <div class="join_cont">
+                    <p class="first_txt">
+                        이메일 주소를입력하시고 인증메일 발송 버튼을 클릭하세요.<br>
+                        인증메일을 받으셨을 경우 거래소에 등록하신 이메일이므로 해당 이메일로 로그인이 가능합니다.
+                    </p>
+                    <dl class="clearfix">
+                        <dt>E-mail</dt>
+                        <dd>
+                            <input type="text" name="" id="" class="w100p">
+                        </dd>
+                    </dl>
+                </div>
+
+                <p class="guide_txt">※ 인증메일을 받기 전 코어닥스 거래소가 스팸목록에 등록되어 있는지 확인하시기 바랍니다.<br>
+                    ※ 스팸목록에 등록되어 있지 않은데도 인증메일을 받지 못하셨다면 다른 이메일 주소로 인증메일 발송을 진행하시기 바랍니다.</p>
+
+                <div class="btnArea pt45">
+                    <a href="#" class="large_btn">인증메일 발송</a>
+                </div>
+            </li><!-- //이메일 찾기 -->
+
+
+            <li class="hide"><!-- 접속비밀번호 찾기 -->
+
+                <div class="join_cont"><!-- 이메일 인증하기 -->
+                    <p class="first_txt">
+                        본인확인을 위해 이메일 인증 및 휴대폰 인증이 필요합니다.<br>
+                        거래소에 등록된 이메일을 입력하시고 인증메일을 발송 버튼을 클릭하세요.
+                    </p>
+                    <dl class="clearfix">
+                        <dt>E-mail</dt>
+                        <dd>
+                            <input type="text" name="" id="" class="w100p">
+                        </dd>
+                    </dl>
+                </div>
+
+                <p class="guide_txt">※ 인증메일을 받기 전 코어닥스 거래소가 스팸목록에 등록되어 있는지 확인하시기 바랍니다.<br>
+                    ※ 스팸목록에 등록되어 있지 않은데도 인증메일을 받지 못하셨다면 다른 이메일 주소로 인증메일 발송을 진행하시기 바랍니다.</p>
+
+                <div class="btnArea pt45">
+                    <a href="#" class="large_btn">인증메일 발송</a>
+                </div><!-- //이메일 인증하기 -->
+
+
+                <!-- 휴대폰 인증하기 -->
+                <!--div class="join_cont">
+                    <p class="first_txt">
+                        본인확인을 위해 이메일 인증 및 휴대폰 인증이 필요합니다.<br>
+                        거래소에 등록된 휴대폰 번호를 입력하시고 인증번호 발송 버튼을 클릭하세요.
+                    </p>
+                    <dl class="clearfix">
+                        <dt>휴대폰 번호</dt>
+                        <dd>
+                            <input type="text" name="" id="" placeholder="-없이 숫자만 입력하세요." class="w470 mr5">
+                            <a href="#" class="btn_white f16">인증요청</a>
+                        </dd>
+                        <dt>인증번호</dt>
+                        <dd>
+                            <input type="text" name="" id="" placeholder="인증번호를 입력하세요." class="w100p">
+                        </dd>
+                    </dl>
+                </div>
+
+                <p class="guide_txt">※ 등록된 휴대폰 번호가 아니면 인증번호가 발송되지 않습니다.</p>
+
+                <div class="btnArea pt45">
+                    <a href="#" class="large_btn">인증 확인</a>
+                </div--><!-- //휴대폰 인증하기 -->
+
+
+            </li><!-- //접속비밀번호 찾기 -->
+        </ul>
+
+    </div><!-- //이메일, 접속비밀번호 찾기 e -->
+
+
+    <script type="text/javascript">
+        //탭 show/hide
+        $('.line_tab > li > button').click(function(){
+            var tabIdx = $(this).parent().index();
+            $('.line_tab > li').removeClass('on');
+            $(this).parent().addClass('on');
+            $('.find_cont > li').hide().eq(tabIdx).show();
+            return false;
+        });
+    </script>
+
+</div>
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

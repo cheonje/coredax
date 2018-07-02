@@ -1,0 +1,68 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="my_qna"><!-- 1:1문의 시작 -->
+
+    <p class="page_head_txt mb20">
+        1:1 문의를 남기시면 담당자가 확인 후 답변 드리도록 하겠습니다. 문의가 많을 경우 답변에 다소 시간이 소요될 수 있는 점 양해바랍니다.
+    </p>
+
+    <div class="bbs_skin"><!-- 게시판 스킨 시작 -->
+        <table class="bbs_write">
+            <!-- 게시판 목록 시작 -->
+            <caption>
+                1:1문의 작성
+                1:1문의 작성 목록으로 분류, 제목, 내용, 파일첨부 순으로 구성되어 있습니다.
+            </caption>
+            <colgroup>
+                <col style="width: 145px;">
+                <col>
+            </colgroup>
+            <tbody>
+            <tr>
+                <th scope="row">
+                    <label for="wrt_tit">분류</label>
+                </th>
+                <td>
+                    <select name="" id="" class="w500">
+                        <option>분류선택</option>
+                        <option value="" selected="selected">회원가입 및 계정</option>
+                        <option value="">거래</option>
+                        <option value="">입출금</option>
+                        <option value="">보안/기타</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">
+                    <label for="wrt_tit">제목</label>
+                </th>
+                <td><input type="text" name="wrt_tit" id="wrt_tit" class="w100p"></td>
+            </tr>
+            <tr>
+                <th scope="row" style="vertical-align: top;">
+                    <label for="wrt_detail">내용</label>
+                </th>
+                <td><textarea name="wrt_detail" id="wrt_detail" class="w100p h400"></textarea></td>
+            </tr>
+            <tr>
+                <th scope="row" style="vertical-align: top;">파일첨부</th>
+                <td>
+                    <input type="text" readonly="readonly" class="fileName w600 mr5">
+                    <label for="uploadBtn" class="md_btn md_white">파일첨부</label>
+                    <input type="file" id="uploadBtn">
+                    <p class="file_txt">파일 확장자는 jpg, png, gif만 가능합니다.(파일 제한 용량 : 5M)</p>
+                </td>
+            </tr>
+            </tbody>
+        </table><!-- //게시판 목록 끝 -->
+        <div class="bbs_btn"><!-- 게시판 하단 버튼 시작 -->
+            <a href="#" class="large_btn">문의하기</a>
+        </div><!-- //게시판 하단 버튼 끝 -->
+    </div><!-- //게시판 스킨 끝 -->
+
+
+</div><!-- //1:1문의 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

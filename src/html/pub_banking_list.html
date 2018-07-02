@@ -1,0 +1,168 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="assets_manage"><!-- 자산관리 입출금내역 시작 -->
+    <p class="page_head_txt">
+        가상화폐 출금 시  준비중인 경우에 한하여 출금을 취소할 수 있습니다.<br>
+        원화 입금 신청 후 24시간 이내에 입금이 완료되지 않으면 고객센터로 문의하시기 바랍니다.
+    </p>
+
+
+    <div class="schBox clearfix">
+        <ul class="radio_list clearfix fl">
+            <li><input type="radio" name="" id="" checked><label for=""><span></span>전체</label></li>
+            <li><input type="radio" name="" id=""><label for=""><span></span>입금</label></li>
+            <li><input type="radio" name="" id=""><label for=""><span></span>출금</label></li>
+        </ul>
+        <ul class="radio_list clearfix fl">
+            <li><input type="radio" name="" id="" checked><label for=""><span></span>전체</label></li>
+            <li><input type="radio" name="" id=""><label for=""><span></span>원화</label></li>
+            <li><input type="radio" name="" id=""><label for=""><span></span>코인</label></li>
+        </ul>
+        <select name="" id="" class="w125 mr10">
+            <option>코인선택</option>
+            <option value="" selected="selected">전체코인</option>
+            <option value="">비트코인</option>
+            <option value="">비트코인캐시</option>
+            <option value="">비트코인골드</option>
+        </select>
+        <select name="" id="" class="w70 pl10">
+            <option>기간선택</option>
+            <option value="" selected="selected">당일</option>
+            <option value="">1주일</option>
+            <option value="">1개월</option>
+        </select>
+        <input type="text" name="" id="" readonly="readonly" value="2018.05.30" class="date w120"> - <input type="text" name="" id="" readonly="readonly" value="2018.05.30" class="date w120">
+        <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+    </div>
+
+    <table class="basic_cc">
+        <caption>
+            입출금내역
+            입출금내역을 제공하며 일자, 구분, 유형, 입금/출금계좌(지갑), 금액/수량, 진행상황 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 130px;">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">일자</th>
+            <th scope="col">구분</th>
+            <th scope="col">유형</th>
+            <th scope="col">입금/출금계좌(지갑)</th>
+            <th scope="col">금액/수량</th>
+            <th scope="col">진행상황</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>2018.06.01</td>
+            <td>원화</td>
+            <td>입금</td>
+            <td class="txt_l">국민은행054************</td>
+            <td class="txt_r">13,000,000</td>
+            <td>입금완료</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>비트코인</td>
+            <td>입금</td>
+            <td class="txt_l">16Z2ueUxZckr4qtR2Mj34ggmnv271ucEvu</td>
+            <td class="txt_r">11,24000000</td>
+            <td>진행중(01/07)</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>이더리움</td>
+            <td>출금</td>
+            <td class="txt_l">0x7e3796aca4f1ee6b4c1867efac9d60cb3accebdb</td>
+            <td class="txt_r">13,000,000</td>
+            <td class="t_red">준비중 <a href="#"><img src="../../assets/images/module/red_cancle.png" alt="취소" class="red_cancle"></a></td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>비트코인</td>
+            <td>입금</td>
+            <td class="txt_l">16Z2ueUxZckr4qtR2Mj34ggmnv271ucEvu</td>
+            <td class="txt_r">0,25450000</td>
+            <td>입금완료</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>원화</td>
+            <td>출금</td>
+            <td class="txt_l">국민은행054************</td>
+            <td class="txt_r">2,000,000</td>
+            <td>출금완료</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>원화</td>
+            <td>출금</td>
+            <td class="txt_l">국민은행054************</td>
+            <td class="txt_r">2,000,000</td>
+            <td>출금완료</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>비트코인</td>
+            <td>입금</td>
+            <td class="txt_l">16Z2ueUxZckr4qtR2Mj34ggmnv271ucEvu</td>
+            <td class="txt_r">0,25450000</td>
+            <td>입금완료</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>리플</td>
+            <td>입금</td>
+            <td class="txt_l">rN9qNpgnBaZwqCq8CvUZRPqCcPPY7wfWep</td>
+            <td class="txt_r">120.32100000</td>
+            <td>진행중(03/07)</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>라이트코인</td>
+            <td>출금</td>
+            <td class="txt_l">34zQadCRCQmoFuNKL6sRnZDzCPo9emGEFU</td>
+            <td class="txt_r">32.12050000</td>
+            <td class="t_red">준비중 <a href="#"><img src="../../assets/images/module/red_cancle.png" alt="취소" class="red_cancle"></a></td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>원화</td>
+            <td>입금</td>
+            <td class="txt_l">국민은행054************</td>
+            <td class="txt_r">500,000</td>
+            <td>진행중</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>원화</td>
+            <td>입금</td>
+            <td class="txt_l">국민은행054************</td>
+            <td class="txt_r">200,000</td>
+            <td>진행중</td>
+        </tr>
+        <tr>
+            <td>2018.06.01</td>
+            <td>비트코인</td>
+            <td>출금</td>
+            <td class="txt_l">rN9qNpgnBaZwqCq8CvUZRPqCcPPY7wfWep</td>
+            <td class="txt_r">0,25450000</td>
+            <td>출금완료</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div><!-- //자산관리 입출금내역 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

@@ -1,0 +1,271 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="mypage"><!-- 마이페이지 회원정보 시작 -->
+
+    <div class="mb60"><!-- 기본정보 -->
+        <h4>기본정보</h4>
+        <ul class="ul_table">
+            <li>
+                <dl>
+                    <dt>성명</dt>
+                    <dd>test00@test.com</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>닉네임</dt>
+                    <dd>가나다라마바사아자차</dd>
+
+                </dl>
+                <a href="#" class="md_btn md_white">변경</a>
+            </li>
+            <li>
+                <dl>
+                    <dt>생년월일</dt>
+                    <dd>2018년5월20일</dd>
+                </dl>
+                <a href="#" class="md_btn md_white">변경</a>
+            </li>
+            <li>
+                <dl>
+                    <dt>이메일</dt>
+                    <dd>Tes****@naver.com</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>휴대폰번호</dt>
+                    <!--dd>010-****-1234</dd--><!-- 인증되었을때 t_gray8 클래스 제거 -->
+                    <dd class="t_gray8">휴대폰 본인인증을 하세요</dd>
+                </dl>
+                <a href="#" class="md_btn">휴대폰 본인인증</a><!-- 미인증시 버튼이 있음 -->
+            </li>
+
+        </ul>
+    </div><!-- //기본정보 -->
+
+
+
+    <div class="mb60"><!-- 보안설정 -->
+        <h4>보안설정</h4>
+        <ul class="ul_table">
+            <li>
+                <dl>
+                    <dt>보안등급설정</dt>
+                    <dd>보안<span class="t_red fw7">0</span>등급</dd>
+                </dl>
+            </li>
+        </ul>
+
+        <ul class="security_step clearfix">
+            <li class="comp"><!-- 1등급 --><!-- 완료된 설정은 comp 클래스가 추가됨 -->
+                <dl>
+                    <dt><span>1</span> 등급</dt>
+                    <dd class="st_tit">휴대폰 본인인증</dd><!-- st_tit 클래스중 현재 진행중일땐 on 클래스 추가 -->
+                    <dd class="st_tit">거래소 계좌발급</dd>
+                    <dd><span>입출금 : 0원</span></dd>
+                </dl>
+                <!--a href="#" class="md_btn md_purple">휴대폰 본인인증</a--><!-- 단계 설정완료시엔 버튼 없어짐 -->
+                <p><input type="checkbox" name="" id="" disabled checked><label for=""><span></span></label></p>
+            </li><!-- //1등급 -->
+            <li class="ing"><!-- 2등급 --><!-- 진행중인 설정은 ing 클래스가 추가됨 -->
+                <dl>
+                    <dt><span>2</span> 등급</dt>
+                    <dd class="st_tit on">본인계좌등록<br><span>(원화 입출금용)</span></dd><!-- st_tit 클래스중 현재 진행중일땐 on 클래스 추가 -->
+                    <dd><span>입출금 : 1,000만원</span></dd>
+                </dl>
+                <a href="#" class="md_btn md_purple">입출금 계좌등록</a><!-- 단계 설정완료시엔 버튼 없어짐 -->
+                <p><input type="checkbox" name="" id="" disabled><label for=""><span></span></label></p>
+            </li><!-- //2등급 -->
+            <li><!-- 3등급 -->
+                <dl>
+                    <dt><span>3</span> 등급</dt>
+                    <dd class="st_tit">2채널 인증<br><span>(구글 OTP)</span></dd>
+                    <dd><span>입출금 : 5,000만원</span></dd>
+                </dl>
+                <!--a href="#" class="md_btn md_purple">구글 OTP 등록</a--><!-- 단계 설정완료시엔 버튼 없어짐 -->
+                <p><input type="checkbox" name="" id="" disabled><label for=""><span></span></label></p>
+            </li><!-- //3등급 -->
+            <li><!-- 4등급 -->
+                <dl>
+                    <dt><span>4</span> 등급</dt>
+                    <dd class="st_tit">2채널 인증<br><span>(구글 OTP)</span></dd>
+                    <dd><span>입출금 : 1억원</span></dd>
+                </dl>
+                <!--a href="#" class="md_btn md_purple">본인 신분확인</a--><!-- 단계 설정완료시엔 버튼 없어짐 -->
+                <p><input type="checkbox" name="" id="" disabled><label for=""><span></span></label></p>
+            </li><!-- //4등급 -->
+        </ul>
+
+
+
+        <ul class="ul_table mb10">
+            <li>
+                <dl>
+                    <dt>계좌번호</dt>
+                    <dd>101000000001</dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>은행계좌번호</dt>
+                    <dd>국민은행 12345601012365</dd>
+
+                </dl>
+                <a href="#" class="md_btn md_white">변경</a>
+            </li>
+            <li>
+                <dl>
+                    <dt>접속 비밀번호</dt>
+                    <dd>********</dd>
+                </dl>
+                <a href="#" class="md_btn md_white">변경</a>
+            </li>
+            <li>
+                <dl>
+                    <dt>계좌 비밀번호</dt>
+                    <dd>****</dd>
+                </dl>
+            </li>
+        </ul>
+        <p class="mb60"><span class="purple_txt">계좌 비밀번호를 잊으셨나요? 본인 신분 확인을 통해 계좌 비밀번호를 재설정하세요!</span></p>
+
+
+        <ul class="ul_table mb20">
+            <li>
+                <dl>
+                    <dt>구글 OTP</dt>
+                    <dd>등록 완료</dd>
+                </dl>
+                <a href="#" class="md_btn md_white">구글 OTP 해지</a>
+            </li>
+        </ul>
+
+        <div class="acc_lock clearfix">
+            <h5>계정잠금 서비스</h5>
+            <div class="acc_txt">
+                <p class="pt10 mb15">계정 잠금 서비스는 고객님의 계정이 해킹의 우려가 있다고 판단될 때 <span class="t_red fw7">매매 또는 출금을 제한</span> 할 수 있는  서비스입니다.<br>
+                    계정 잠금 서비스 해제는 이메일 인증 및 휴대폰 본인인증 후에 가능합니다.</p>
+                <a href="#" class="md_btn">계정잠금 신청</a>
+            </div>
+        </div>
+    </div><!-- //보안설정 -->
+
+    <div class="mb60"><!-- 접속이력 -->
+        <h4>접속이력</h4>
+        <div class="clearfix mb10">
+            <p class="fl">※ 최근 접속 기준 50회까지 이력을 조회할 수 있습니다.</p>
+
+            <ul class="fr clearfix purple_ctrl">
+                <li><a href="#" class="purple_txt purple_prev">이전페이지</a></li><!-- 첫 리스트에서는 미출력 -->
+                <li><a href="#" class="purple_txt">다음페이지</a></li><!-- 마지막 리스트에서는 미출력 -->
+            </ul>
+
+        </div>
+
+        <table class="basic_cc">
+            <caption>
+                접속이력
+                접속이력 정보를 제공하며 로그인 시간, 접속 IP, 접속 위치, 접속 기기 순으로 구성되어 있습니다.
+            </caption>
+
+            <colgroup>
+                <col style="width: 25%;">
+                <col style="width: 25%;">
+                <col style="width: 25%;">
+                <col style="width: 25%;">
+            </colgroup>
+            <thead>
+            <tr>
+                <th scope="col">로그인 시간</th>
+                <th scope="col">접속 IP</th>
+                <th scope="col">접속 위치</th>
+                <th scope="col">접속 기기</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2018.05.28 10:59:46</td>
+                <td>192.168.005.001</td>
+                <td>Korea</td>
+                <td>WTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 09:35:18</td>
+                <td>112.220.085.147</td>
+                <td>Korea</td>
+                <td>HTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 10:59:46</td>
+                <td>192.168.005.001</td>
+                <td>Korea</td>
+                <td>WTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 09:35:18</td>
+                <td>112.220.085.147</td>
+                <td>Korea</td>
+                <td>HTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 10:59:46</td>
+                <td>192.168.005.001</td>
+                <td>Korea</td>
+                <td>WTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 09:35:18</td>
+                <td>112.220.085.147</td>
+                <td>Korea</td>
+                <td>HTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 10:59:46</td>
+                <td>192.168.005.001</td>
+                <td>Korea</td>
+                <td>WTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 09:35:18</td>
+                <td>112.220.085.147</td>
+                <td>Korea</td>
+                <td>HTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 10:59:46</td>
+                <td>192.168.005.001</td>
+                <td>Korea</td>
+                <td>WTS</td>
+            </tr>
+            <tr>
+                <td>2018.05.28 09:35:18</td>
+                <td>112.220.085.147</td>
+                <td>Korea</td>
+                <td>HTS</td>
+            </tr>
+            </tbody>
+        </table>
+    </div><!-- //접속이력 -->
+
+
+
+    <div><!-- 회원탈퇴 -->
+        <h4>회원탈퇴</h4>
+        <p class="p_txt mb15">회원탈퇴 시, 거래소가 보관하고있는 회원님의 모든 개인정보가 삭제, 폐기되며 복구가 불가능합니다.<br>
+            (단, 관계법령에 따라 회사가 보관하여야 하는 정보는 일정 기간 보관됩니다.)<br>
+            회원탈퇴를 진행하시려면 아래 회원탈퇴하기 버튼을 클릭하시기 바랍니다. </p>
+        <a href="#" class="md_btn">회원탈퇴하기</a>
+    </div><!-- 회원탈퇴 -->
+
+
+
+
+
+
+
+</div><!-- //마이페이지 회원정보 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

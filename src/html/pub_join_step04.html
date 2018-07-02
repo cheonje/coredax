@@ -1,0 +1,65 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+
+
+
+
+<div class="membership">
+
+    <div class="joinForm white970"><!-- 회원가입 s -->
+
+        <div class="tit_box">
+            <h3>회원가입</h3><!-- 페이지 제목(현재 수동) -->
+            <p class="h3_txt">COREDAX 회원가입을 환영합니다.</p>
+        </div>
+
+
+
+
+
+        <div class="join_top clearfix">
+            <a href="#" class="prev">이전단계</a>
+            <ol class="join_step clearfix">
+                <li><em>1</em><span>기본정보 입력</span></li>
+                <li><em>2</em><span>약관동의</span></li>
+                <li><em>3</em><span>이메일 인증</span></li>
+                <li class="on"><em>4</em><span>접속 비밀번호 설정</span></li>
+            </ol>
+
+        </div>
+
+        <div class="join_cont">
+            <p class="first_txt">
+                접속비밀번호는 <span class="t_red">영문자, 숫자, 특수문자 포함 8~16자리</span>로 설정하실 수 있습니다. (사용가능 특수문자 : !@#$%^&*)<br>
+                생년월일, 전화번호, 연속된 숫자 등은 해킹 위험이 있으니 사용시 주의하시기 바랍니다.
+            </p>
+            <dl class="clearfix">
+                <dt>접속비밀번호</dt>
+                <dd><input type="password" name="" id="" maxlength="16" placeholder="영문자, 숫자, 특수문자 포함 8~16자리" class="w465"></dd>
+                <dd class="pass_list">
+                    <ul>
+                        <li class="pass">영문자</li><!-- 조건에 맞으면 pass 클래스 추가 -->
+                        <li>숫자</li>
+                        <li>특수문자</li>
+                        <li>8~16 자릿수</li>
+                    </ul>
+                </dd>
+                <dt>비밀번호재입력</dt>
+                <dd class="pass_input">
+                    <input type="password" name="" id="" maxlength="16" class="w465 bd_red"><!-- 비밀번호가 일치하면 bd_blue 클래스 추가, 불일치 bd_red -->
+                    <span class="t_red">비밀번호가 일치하지 않습니다.</span>
+                </dd>
+            </dl>
+        </div>
+        <div class="btnArea">
+            <a href="#" class="large_btn">다음단계로 이동</a>
+        </div>
+    </div><!-- //회원가입 e -->
+
+
+
+</div>
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

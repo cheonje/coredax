@@ -1,0 +1,134 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="assets_manage"><!-- 자산관리 자산평가 시작 -->
+
+    <div class="assets_box mb60">
+        <p class="my_assets mb35">나의 총자산 : <span>1,000,000</span> <em>KRW</em></p>
+       <div class="pro clearfix mb20">
+           <div class="cash" style="width: 80%;">80%</div><!-- 총자산에서의 현금 %값을 스타일의 width값에 반영 -->
+           <div class="coin" style="width: 20%;">20%</div><!-- 총자산에서의 코인평가금 %값을 스타일의 width값에 반영 -->
+       </div>
+        <ul class="assets_info clearfix">
+            <li>
+                <h5>현금</h5>
+                <dl class="clearfix">
+                    <dt>사용가능</dt>
+                    <dd><span>98,777,706</span> KRW</dd>
+                    <dt>예수금</dt>
+                    <dd><span>99,757,922</span> KRW</dd>
+                </dl>
+            </li>
+            <li>
+                <h5>코인평가금</h5>
+                <dl class="clearfix">
+                    <dt>평가금</dt>
+                    <dd><span>285,447</span> KRW</dd>
+                    <dt>매입금</dt>
+                    <dd><span>241,790</span> KRW</dd>
+                </dl>
+            </li>
+            <li>
+                <h5>평가손익</h5>
+                <dl class="clearfix">
+                    <dt>평가손익</dt>
+                    <dd><span>285,447</span> KRW</dd>
+                    <dt>손익률</dt>
+                    <dd><span>18.06</span> %</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+
+    <h4 class="mb20">코인별 잔고</h4>
+    <table class="basic_cc cr">
+        <caption>
+            코인별 잔고
+            코인별 잔고 정보를 제공하며 코인명, 평가손익, 손익률, 보유수량, 가능수량, 평균매입가, 현재가 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 16.66%;">
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">코인명</th>
+            <th scope="col">평가손익</th>
+            <th scope="col">손익률</th>
+            <th scope="col">보유수량</th>
+            <th scope="col">가능수량</th>
+            <th scope="col">평균매입가</th>
+            <th scope="col">현재가</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>비트코인골드</td>
+            <td class="t_red">47,922</td>
+            <td class="t_red">50.75%</td>
+            <td>0.01100000</td>
+            <td>0.01100000</td>
+            <td>7,960.000</td>
+            <td class="t_red">12,000,000</td>
+        </tr>
+        <tr>
+            <td>비트코인</td>
+            <td class="t_sky">-47,922</td>
+            <td class="t_sky">-2.75%</td>
+            <td>0.01100000</td>
+            <td>0.01100000</td>
+            <td>480,000</td>
+            <td class="t_sky">480,000</td>
+        </tr>
+        <tr>
+            <td>비트코인</td>
+            <td>47,922</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>비트코인골드</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td>비트코인</td>
+            <td>47,922</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>비트코인골드</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div><!-- //자산관리 자산평가 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

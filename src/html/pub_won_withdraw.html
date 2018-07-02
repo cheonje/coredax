@@ -1,0 +1,102 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="assets_manage"><!-- 자산관리 원화출금 시작 -->
+
+    <p class="page_head_txt">
+        실명 확인 후 입출금 계좌 서비스 전까지 고객님의 자산을 안전하게 보호하기 위해 원화 출금은 1일 2회  나누어 처리됩니다.<br>
+        출금이 바로 처리되지 않더라도 고객님의 자산을 보호하기 위함이오니 양해 부탁드립니다.
+    </p>
+
+    <h4 class="mb20">입출금 계좌 정보</h4>
+    <ul class="unline_table mb60">
+        <li>
+            <dl>
+                <dt>은행명</dt>
+                <dd><input type="text" readonly="readonly" value="국민은행" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>은행계좌번호</dt>
+                <dd><input type="text" readonly="readonly" value="12345612789654" class="w500"></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <!-- 등록계좌가 없을때 출력 -->
+    <!--div class="un_regist mb60">
+        <p>등록된 입출금계좌가 없습니다. 입출금 계좌를 등록하세요</p>
+        <a href="#" class="md_btn">입출금 계좌 등록</a>
+    </div-->
+
+    <h4 class="mb20">출금 금액 설정</h4>
+    <ul class="unline_table mb15">
+        <li>
+            <dl>
+                <dt>계좌번호</dt>
+                <dd><input type="text" readonly="readonly" value="1010100000001" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>계좌비밀번호</dt>
+                <dd><input type="password" class="w180"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>출금가능금액</dt>
+                <dd><input type="text" readonly="readonly" value="1,200,000원" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>최소출금가능금액</dt>
+                <dd><input type="text" readonly="readonly" value="1,000원" class="w500"></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>출금금액</dt>
+                <dd><input type="text" class="w360 mr8"><a href="#" class="md_btn">전액</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>수수료</dt>
+                <dd><input type="text" readonly="readonly" value="1,000원" class="w360 mr8"><a href="#" class="md_btn md_white">수수료안내</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>수수료</dt>
+                <dd>
+                    <span class="fw7 mr23">1회</span><input type="text" readonly="readonly" value="20,000,000원" class="w130 mr8">
+                    <span class="fw7 mr23">1일</span><input type="text" readonly="readonly" value="50,000,000원" class="w130 mr8"><a href="#" class="md_btn md_white">출금한도안내</a></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt style="line-height: 20px;">총 출금액<br><span class="f13">(수수료포함)</span></dt>
+                <dd><input type="text" readonly="readonly" value="101,000원" class="w360 mr8"><a href="#" class="md_btn">출금하기</a></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <ul class="li_tx">
+        <li>원화 출금 처리 시간<br>
+            - 오후 4시 ~ 익일 오전 10시 : 낮 12시부터 일괄처리<br>
+            - 오전 10시 ~ 오후 4시 : 오후 6시부터 일괄처리</li>
+        <li>주말 및 공휴일 출금 신청 시 다음 영업일 낮 12시부터 일괄 처리 됩니다.</li>
+        <li>거래소 계좌에 원화를 <span class="fw7">최초 입금하시면 72시간 동안 원화 및 코인출금이 제한</span>됩니다.</li>
+    </ul>
+
+
+
+
+
+</div><!-- //자산관리 원화출금 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

@@ -1,0 +1,141 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="coin_trend concern"><!-- 코인동향 관심코인동향 시작 -->
+    <div class="trend_top clearfix mb40">
+        <select name="" id="" class="w260 fl">
+            <option>관심코인 선택</option>
+            <option value="" selected="selected">관심코인1</option>
+            <option value="">관심코인2</option>
+            <option value="">관심코인3</option>
+        </select>
+
+        <ul class="btn_tab fr">
+            <li class="on"><a href="#">관심코인편집</a></li>
+            <li><a href="#">관심그룹편집</a></li>
+        </ul>
+
+        <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+    </div>
+
+
+    <table class="basic_cc"><!-- 관심코인동향 목록 -->
+        <caption>
+            관심코인동향
+            관심코인동향 정보를 제공하며 코인명, 현재가, 기준대비 등락률, 최저가, 최고가, 거래량, 거래금액(백만원), 시가총액(억원) 순으로 구성되어 있습니다.
+        </caption>
+
+        <colgroup>
+            <col style="width: 135px;">
+            <col style="width: 105px;">
+            <col style="width: 105px;">
+            <col style="width: 105px;">
+            <col style="width: 105px;">
+            <col style="width: 110px;">
+            <col style="width: 110px;">
+            <col style="width: 110px;">
+        </colgroup>
+        <thead>
+        <tr>
+            <th scope="col">코인명</th>
+            <th scope="col">현재가</th>
+            <th scope="col">기준대비<br>등락률</th>
+            <th scope="col">최저가</th>
+            <th scope="col">최고가</th>
+            <th scope="col">거래량</th>
+            <th scope="col">거래금액<br><span class="fw4">(백만원)</span></th>
+            <th scope="col">시가총액<br><span class="fw4">(억원)</span></th>
+        </tr>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="txt_c">비트코인<br>BTC/KRW</td>
+            <td class="change fw7 t_red">0.12045601<br>
+                <span>≈ 8,002,000</span></td><!-- 상승일때 t_red 클래스 추가 -->
+            <td class="t_red">▲15,000<br>2.51%</td><!-- 상승일때 t_red 클래스 추가 -->
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+        <tr>
+            <td class="txt_c">비트코인캐시<br>BCH/KRW</td>
+            <td class="change fw7 t_sky">0.12045601<br>
+                <span>≈ 8,002,000</span></td><!-- 하락일때 t_sky 클래스 추가 -->
+            <td class="t_sky">▼15,000<br>1.23%</td><!-- 하락일때 t_sky 클래스 추가 -->
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+
+        <tr>
+            <td class="txt_c">비트코인골드<br>BTG/KRW</td>
+            <td class="change fw7">0.12045601<br>
+                <span>≈ 8,002,000</span></td>
+            <td>0</td>
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+
+        <tr>
+            <td class="txt_c">이더리움<br>ETC/KRW</td>
+            <td class="change fw7 t_red">0.12045601<br>
+                <span>≈ 8,002,000</span></td><!-- 상승일때 t_red 클래스 추가 -->
+            <td class="t_red">▲15,000<br>2.51%</td><!-- 상승일때 t_red 클래스 추가 -->
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+
+        <tr>
+            <td class="txt_c">이더리움클래식<br>ETC/KRW</td>
+            <td class="change fw7 t_sky">0.12045601<br>
+                <span>≈ 8,002,000</span></td><!-- 하락일때 t_sky 클래스 추가 -->
+            <td class="t_sky">▼15,000<br>1.23%</td><!-- 하락일때 t_sky 클래스 추가 -->
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+
+        <tr>
+            <td class="txt_c">라이트코인<br>LTC/KRW</td>
+            <td class="change fw7">0.12045601<br>
+                <span>≈ 8,002,000</span></td>
+            <td>0</td>
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+
+        <tr>
+            <td class="txt_c">리플<br>XRP/KRW</td>
+            <td class="change fw7">0.12045601<br>
+                <span>≈ 8,002,000</span></td>
+            <td>0</td>
+            <td class="fw7">0.082500</td>
+            <td class="fw7">0.084800</td>
+            <td>12,389,273</td>
+            <td>119,943</td>
+            <td>1,588,716</td>
+        </tr>
+        </tbody>
+    </table>
+    <!-- //관심코인동향 목록 끝 -->
+
+</div><!-- //코인동향 관심코인동향 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

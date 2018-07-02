@@ -1,0 +1,304 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+
+<div class="mb50 h100">
+
+    <p class="mb20">
+        *div class="modal" style="display: block;">*!-- 모달팝업 s -->
+        ...
+        */div>*!-- //모달팝업 e -->
+        <br>부분을 사용하시면 됩니다.
+    </p>
+    <p class="t_red">※ *는 < 입니다.</p>
+    <p class="t_red">※ style="display: block;" 를 지우고 사용하세요.</p>
+</div>
+
+
+<div class="mb50 h900">
+    <h4 id="coinSummary" class="mb20">코인개요</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">코인개요
+                <select name="" id="" class="w190 ml20">
+                    <option>코인선택</option>
+                    <option value="" selected="selected">비트코인 BTC/KRW</option>
+                    <option value="">비트코인캐시 BCH/KRW</option>
+                    <option value="">비트코인골드 BTG/KRW</option>
+                    <option value="">이더리움 ETC/KRW</option>
+                    <option value="">이더리움클래식 ETC/KRW</option>
+                    <option value="">라이트코인 LTC/KRW</option>
+                    <option value="">리플 XRP/KRW</option>
+                </select>
+            </p><!-- 제목 -->
+
+            <ul class="ul_table mb30">
+                <li>
+                    <dl>
+                        <dt>최초발행</dt>
+                        <dd>2009년 1월</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>시가총액</dt>
+                        <dd>151조원</dd>
+
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>블록생성주기</dt>
+                        <dd>600초</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>채굴보상량</dt>
+                        <dd>12.500000</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>협의 프로토콜</dt>
+                        <dd>PoW</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>백서</dt>
+                        <dd>https://bitcoin.org/bitcoin.pdf</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>내용</dt>
+                        <dd style="line-height: 22px;">비트코인은 최초로 구현된 가상화폐입니다. 발행 및 유통을 관리
+                            하는 중앙권력이나 중간상인 없이, P2P 네트워크 기술을 이용하
+                            여 네트워크에 참여하는 사용자들이 주체적으로 화폐를 발행하고
+                            이체내용을 공동으로 관리합니다. 이를 가능하게 한 블록체인
+                            기술을 처음으로 코인에 도입한 것이 바로 비트코인입니다. 비트
+                            코인을 사용하는 개인과 사업자의 수는 꾸준히 증가하고 있으며,
+                            여기에는식당, 아파트, 법률사무소, 온라인 서비스를 비롯한
+                            소매상들이 포함됩니다. 비트코인은 새로운 사회 현상이지만 아주
+                            빠르게 성장하고 있습니다. 이를 바탕으로 가치 증대는물론, 매일
+                            수백만 달러의 비트코인이 교환되고 있습니다. 비트코인은
+                            가상화폐 시장에서 현재 유통시가총액과 코인의 가치가 가장 크고
+                            , 거래량 또한 안정적입니다. 이더리움이 빠르게 추격하고 있지만
+                            아직은 가장 견고한 가상화폐라고 볼 수 있습니다.
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn close_btn">닫기</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+<div class="mb50 h900">
+    <h4 id="concernEdit" class="mb20">관심코인 편집</h4>
+
+    <div class="modal" style="display: block;"><!-- 모달팝업 s -->
+        <div class="message_box">
+            <p class="pop_tit">관심코인 편집</p><!-- 제목 -->
+            <div class="pop_cont line mb30">
+
+                <div class="concern_edit clearfix pt20">
+                    <div class="concern_left">
+                        <ul class="tab_tit clearfix">
+                            <li class="on">KRW</li><!-- 선택되었을때 on 클래스 추가 -->
+                            <li>BTC</li>
+                            <li>ETH</li>
+                        </ul>
+                        <div class="tab_cont"><!-- KRW -->
+
+                            <table class="concern_tb">
+                                <caption>
+                                    KRW 관심코인
+                                    KRW 관심코인 목록를 제공하며 코인명, Pair 순으로 구성되어 있습니다.
+                                </caption>
+
+                                <colgroup>
+                                    <col style="width: 60%;">
+                                    <col style="width: 40%;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col">코인명</th>
+                                    <th scope="col">Pair</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>비트코인</td>
+                                    <td>BTC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>비트코인캐시</td>
+                                    <td>BCC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>비트코인골드</td>
+                                    <td>BCC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>이더리움</td>
+                                    <td>ETC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>이더리움클래식</td>
+                                    <td>ETC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td>리플</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>라이트코인</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- //KRW -->
+
+                        <div class="tab_cont hide"><!-- BTC -->
+                            <div class="cont_top">
+                                <p class="tit">BTC</p>
+                                <p class="num">현재가</p>
+                            </div>
+                            <ul class="cont_list">
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                            </ul>
+                        </div><!-- //BTC -->
+
+                        <div class="tab_cont hide"><!-- ETH -->
+                            <div class="cont_top">
+                                <p class="tit">ETH</p>
+                                <p class="num">현재가</p>
+                            </div>
+                            <ul class="cont_list">
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                                <li>리스트</li>
+                            </ul>
+                        </div><!-- //ETH -->
+
+
+                    </div>
+
+
+                    <div class="concern_right">
+                        <select name="" id="">
+                            <option>관심코인선택</option>
+                            <option value="" selected="selected">관심코인1</option>
+                            <option value="">관심코인2</option>
+                            <option value="">관심코인3</option>
+                        </select>
+
+                        <div class="tab_cont">
+
+                            <table class="concern_tb">
+                                <caption>
+                                    관심코인
+                                    관심코인 목록를 제공하며 코인명, Pair 순으로 구성되어 있습니다.
+                                </caption>
+
+                                <colgroup>
+                                    <col style="width: 5%;">
+                                    <col style="width: 55%;">
+                                    <col style="width: 40%;">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th scope="col"><input type="checkbox" name="" id=""><label for=""><span></span></label></th>
+                                    <th scope="col">코인명</th>
+                                    <th scope="col">Pair</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="" id=""><label for=""><span></span></label></td>
+                                    <td>비트코인</td>
+                                    <td>BTC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="" id=""><label for=""><span></span></label></td>
+                                    <td>비트코인캐시</td>
+                                    <td>BCC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="" id=""><label for=""><span></span></label></td>
+                                    <td>비트코인골드</td>
+                                    <td>BCC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="" id=""><label for=""><span></span></label></td>
+                                    <td>이더리움</td>
+                                    <td>ETC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="" id=""><label for=""><span></span></label></td>
+                                    <td>이더리움클래식</td>
+                                    <td>ETC/KRW</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="" id=""><label for=""><span></span></label></td>
+                                    <td>리플</td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <ul class="chk_ctrl clearfix">
+                                <li><a href="#"><img src="../../assets/images/module/concern_ctrl_top.png" alt="위로"></a></li>
+                                <li><a href="#"><img src="../../assets/images/module/concern_ctrl_down.png" alt="아래로"></a></li>
+                                <li><a href="#" class="pt8"><img src="../../assets/images/module/concern_ctrl_first.png" alt="맨위로"></a></li>
+                                <li><a href="#" class="pt8"><img src="../../assets/images/module/concern_ctrl_last.png" alt="맨아래로"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <ul class="edit_ctrl">
+                        <li class="add"><a href="#">추가</a></li>
+                        <li class="del"><a href="#">제거</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="pop_btn">
+            <a href="#" class="md_btn md_white">서버저장</a>
+            <a href="#" class="md_btn md_white">서버정보 불러오기</a>
+            <a href="#" class="md_btn">저장 후 닫기</a>
+        </div>
+        <button type="button" class="x_btn">닫기</button>
+    </div><!-- //모달팝업 e -->
+</div>
+
+
+
+
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

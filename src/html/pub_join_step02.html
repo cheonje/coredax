@@ -1,0 +1,113 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+
+
+
+
+<div class="membership">
+
+    <div class="joinForm white970"><!-- 회원가입 s -->
+
+        <div class="tit_box">
+            <h3>회원가입</h3><!-- 페이지 제목(현재 수동) -->
+            <p class="h3_txt">COREDAX 회원가입을 환영합니다.</p>
+        </div>
+
+
+
+
+
+        <div class="join_top clearfix">
+            <a href="#" class="prev">이전단계</a>
+            <ol class="join_step clearfix">
+                <li><em>1</em><span>기본정보 입력</span></li>
+                <li class="on"><em>2</em><span>약관동의</span></li>
+                <li><em>3</em><span>이메일 인증</span></li>
+                <li><em>4</em><span>접속 비밀번호 설정</span></li>
+            </ol>
+
+        </div>
+
+        <div class="join_cont">
+            <p class="first_txt">
+                <span class="t_red">필수동의</span>: 서비스 이용약관, 개인정보처리방침, 투자유의사항<br>
+                선택동의 : 이벤트, 프로모션 등 정보 수신
+            </p>
+
+            <div class="agree_box" tabindex="0"><!-- 서비스 이용약관 시작 -->
+                <h4>서비스 이용약관</h4>
+                <p> 제 1조 목적<br>
+                    이 약관은 주식회사 네오프레임(이하 “회사”라 한다)이 제공하는 코어덱스 및 코어덱스 관</p>
+            </div> <!-- //서비스 이용약관 끝 -->
+
+            <div class="agree_chk">
+                <input type="checkbox" name="svcAgreeYN" id="svcAgreeYN" checked><label for="svcAgreeYN"><span></span>서비스 이용약관을 읽고 동의합니다.<em class="t_red">(필수)</em></label>
+            </div>
+
+
+            <div class="agree_box" tabindex="0"><!-- 개인정보보호방침 시작 -->
+                <h4>개인정보보호방침</h4>
+                <p> 제 1조 목적<br>
+                    이 약관은 주식회사 네오프레임(이하 “회사”라 한다)이 제공하는 코어덱스 및 코어덱스 관</p>
+            </div> <!-- //개인정보보호방침 끝 -->
+
+            <div class="agree_chk">
+                <input type="checkbox" name="memAgreeYN" id="memAgreeYN"><label for="memAgreeYN"><span></span>개인정보보호방침을 읽고 동의합니다.<em class="t_red">(필수)</em></label>
+            </div>
+
+
+            <div class="agree_box" tabindex="0"><!-- 투자유의사항 시작 -->
+                <h4>투자유의사항</h4>
+                <p> 제 1조 목적<br>
+                    이 약관은 주식회사 네오프레임(이하 “회사”라 한다)이 제공하는 코어덱스 및 코어덱스 관</p>
+            </div> <!-- //투자유의사항 끝 -->
+
+            <div class="agree_chk">
+                <input type="checkbox" name="invAgreeYN" id="invAgreeYN"><label for="invAgreeYN"><span></span>투자유의사항을 읽고 동의합니다.<em class="t_red">(필수)</em></label>
+            </div>
+
+
+            <div class="agree_box" tabindex="0"><!-- 정보수신 시작 -->
+                <h4>이벤트, 프로모션 등 정보수신</h4>
+                <p> 제 1조 목적<br>
+                    이 약관은 주식회사 네오프레임(이하 “회사”라 한다)이 제공하는 코어덱스 및 코어덱스 관</p>
+            </div> <!-- //정보수신 끝 -->
+
+            <div class="agree_chk">
+                <input type="checkbox" name="infoAgreeYN" id="infoAgreeYN"><label for="infoAgreeYN"><span></span>정보수신에 읽고 동의합니다.<em>(선택)</em></label>
+            </div>
+
+            <div class="agree_all">
+                <input type="checkbox" name="agreeAll" id="agreeAll" onclick="allcheck();"><label for="agreeAll">전체동의<span></span></label>
+            </div>
+
+            <script type="text/javascript"> //전체 체크
+            function allcheck(){
+                if(  $( "#agreeAll" ).is( ":checked" ) ){
+                    $( "#svcAgreeYN" ).prop( "checked" , true);
+                    $( "#memAgreeYN" ).prop( "checked" , true );
+                    $( "#invAgreeYN" ).prop( "checked" , true);
+                    $( "#infoAgreeYN" ).prop( "checked" , true );
+
+                }else{
+                    $( "#svcAgreeYN" ).prop( "checked" , false );
+                    $( "#memAgreeYN" ).prop( "checked" , false );
+                    $( "#invAgreeYN" ).prop( "checked" , false );
+                    $( "#infoAgreeYN" ).prop( "checked" , false );
+                }
+            }
+            </script>
+
+        </div>
+        <div class="btnArea">
+            <a href="#" class="large_btn">다음단계로 이동</a>
+        </div>
+    </div><!-- //회원가입 e -->
+
+
+
+</div>
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->

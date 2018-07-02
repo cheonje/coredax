@@ -1,0 +1,35 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video /* strong , b */ {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+html {height: 100%;}
+body {width: 100%; min-height: 100%;  margin: 0; padding: 0;}
+table {border-collapse: collapse; vertical-align: top; border-spacing: 0;}
+img {vertical-align: top;}
+a {color: #333; text-decoration: none;}
+a:hover, a:active, a:focus {color: #333;}
+ul, ol, li {list-style: none;}
+em, var {font-style: normal;}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, nav, section, summary {display: block;}
+select, input {vertical-align: middle;}
+
+/* 줄바꿈 */
+div, p, span, li, table td {word-break: break-all;} /* 국문 */
+/* div, p, span, li, table td {word-break: normal;} 영문 */
+
+caption, legend {visibility: hidden; overflow: hidden; width: 0; height: 0; margin: 0; padding: 0; font-size: 0; line-height: 0;}
+hr {visibility: hidden; overflow: hidden; position: absolute; width: 0; height: 0; font-size: 0; line-height: 0;}
+
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}

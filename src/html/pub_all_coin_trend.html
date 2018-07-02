@@ -1,0 +1,379 @@
+<? include ("header.html"); ?><!-- 공통 Header -->
+<? include ("sub_head.html"); ?><!-- 서브용 Header -->
+
+<div class="coin_trend"><!-- 코인동향 전체코인동향 시작 -->
+
+    <ul class="line_tab mb30"><!-- 라인탭 -->
+        <li class="on"><button type="button">KRW</button></li>
+        <li><button type="button">BTC</button></li>
+        <li><button type="button">ETH</button></li>
+    </ul><!-- //라인탭 -->
+
+
+    <ul class="coin_trend_list"><!-- 전체코인동향 목록 -->
+
+        <li><!-- KRW 전체코인동향 -->
+            <table class="basic_cc">
+                <caption>
+                    KRW 전체코인동향
+                    KRW 전체코인동향 정보를 제공하며 코인명, Pair, 현재가, 기준대비, 등락률, 최저가, 최고가, 거래량, 거래금액(백만원), 시가총액(억원) 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 125px;">
+                    <col style="width: 75px;">
+                    <col style="width: 90px;">
+                    <col style="width: 80px;">
+                    <col style="width: 70px;">
+                    <col style="width: 85px;">
+                    <col style="width: 85px;">
+                    <col style="width: 95px;">
+                    <col style="width: 95px;">
+                    <col style="width: 95px;">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col"><div class="relative">코인명<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">Pair<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">현재가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">기준대비<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">등락률<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">최저가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">최고가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">거래량<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">거래금액<br><span class="fw4">(백만원)</span><span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">시가총액<br><span class="fw4">(억원)</span><span class="sort_btn"></span></div></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="btc ic">비트코인</span></td>
+                    <td class="txt_c">BTC/KRW</td>
+                    <td class="fw7 t_red">80,002,000</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">▲12,000</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">2.51%</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td class="">1,588,716</td>
+                </tr>
+
+                <tr>
+                    <td><span class="bch ic">비트코인캐시</span></td>
+                    <td class="txt_c">BCH/KRW</td>
+                    <td class="fw7 t_sky">80,002,000</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">▼12,000</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">2.51%</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td>1,588,716</td>
+                </tr>
+
+                <tr>
+                    <td><span class="btg ic">비트코인골드</span></td>
+                    <td class="txt_c">BTG/KRW</td>
+                    <td class="fw7">80,002,000</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td>1,588,716</td>
+                </tr>
+
+                <tr>
+                    <td><span class="eth ic">이더리움</span></td>
+                    <td class="txt_c">ETC/KRW</td>
+                    <td class="fw7 t_red">80,002,000</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">▲12,000</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">2.51%</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td class="">1,588,716</td>
+                </tr>
+
+                <tr>
+                    <td><span class="etc ic">이더리움클래식</span></td>
+                    <td class="txt_c">ETC/KRW</td>
+                    <td class="fw7 t_sky">80,002,000</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">▼12,000</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">2.51%</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td>1,588,716</td>
+                </tr>
+
+                <tr>
+                    <td><span class="ltc ic">라이트코인</span></td>
+                    <td class="txt_c">LTC/KRW</td>
+                    <td class="fw7">80,002,000</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td>1,588,716</td>
+                </tr>
+
+                <tr>
+                    <td><span class="xrp ic">리플</span></td>
+                    <td class="txt_c">XRP/KRW</td>
+                    <td class="fw7">80,002,000</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">8,002,000</td>
+                    <td class="fw7">8,002,000</td>
+                    <td>12,389.273</td>
+                    <td>119,943</td>
+                    <td>1,588,716</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+        </li><!-- //KRW 전체코인동향 -->
+
+        <li class="hide"><!-- BTC 전체코인동향 -->
+            <table class="basic_cc">
+                <caption>
+                    BTC 전체코인동향
+                    BTC 전체코인동향 정보를 제공하며 코인명, Pair, 현재가≈원화환산, 기준대비, 등락률, 최저가, 최고가, 거래량 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 135px;">
+                    <col style="width: 80px;">
+                    <col style="width: 130px;">
+                    <col style="width: 120px;">
+                    <col style="width: 75px;">
+                    <col style="width: 130px;">
+                    <col style="width: 130px;">
+                    <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col"><div class="relative">코인명<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">Pair<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">현재가<br><span class="fw4">≈ 원화환산</span><span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">기준대비<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">등락률<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">최저가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">최고가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">거래량<span class="sort_btn"></span></div></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="bch ic">비트코인캐시</span></td>
+                    <td class="txt_c">BCH/KRW</td>
+                    <td class="change fw7 t_sky">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">▼0.00008780</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">2.51%</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="btg ic">비트코인골드</span></td>
+                    <td class="txt_c">BTG/KRW</td>
+                    <td class="change fw7">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="eth ic">이더리움</span></td>
+                    <td class="txt_c">ETC/KRW</td>
+                    <td class="change fw7 t_red">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">▲0.00008780</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">2.51%</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="etc ic">이더리움클래식</span></td>
+                    <td class="txt_c">ETC/KRW</td>
+                    <td class="change fw7 t_sky">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">▼0.00008780</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">2.51%</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="ltc ic">라이트코인</span></td>
+                    <td class="txt_c">LTC/KRW</td>
+                    <td class="change fw7">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="xrp ic">리플</span></td>
+                    <td class="txt_c">XRP/KRW</td>
+                    <td class="change fw7">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+        </li><!-- //BTC 전체코인동향 -->
+
+        <li class="hide"><!-- ETH 전체코인동향 -->
+            <table class="basic_cc">
+                <caption>
+                    ETH 전체코인동향
+                    ETH 전체코인동향 정보를 제공하며 코인명, Pair, 현재가≈원화환산, 기준대비, 등락률, 최저가, 최고가, 거래량 순으로 구성되어 있습니다.
+                </caption>
+
+                <colgroup>
+                    <col style="width: 135px;">
+                    <col style="width: 80px;">
+                    <col style="width: 130px;">
+                    <col style="width: 120px;">
+                    <col style="width: 75px;">
+                    <col style="width: 130px;">
+                    <col style="width: 130px;">
+                    <col style="width: 100px;">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col"><div class="relative">코인명<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">Pair<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">현재가<br><span class="fw4">≈ 원화환산</span><span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">기준대비<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">등락률<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">최저가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">최고가<span class="sort_btn"></span></div></th>
+                    <th scope="col"><div class="relative">거래량<span class="sort_btn"></span></div></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="btc ic">비트코인</span></td>
+                    <td class="txt_c">BTC/KRW</td>
+                    <td class="change fw7 t_red">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">▲0.00008780</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="t_red">2.51%</td><!-- 상승일때 t_red 클래스 추가 -->
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="bch ic">비트코인캐시</span></td>
+                    <td class="txt_c">BCH/KRW</td>
+                    <td class="change fw7 t_sky">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">▼0.00008780</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">2.51%</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="btg ic">비트코인골드</span></td>
+                    <td class="txt_c">BTG/KRW</td>
+                    <td class="change fw7">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="etc ic">이더리움클래식</span></td>
+                    <td class="txt_c">ETC/KRW</td>
+                    <td class="change fw7 t_sky">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">▼0.00008780</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="t_sky">2.51%</td><!-- 하락일때 t_sky 클래스 추가 -->
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="ltc ic">라이트코인</span></td>
+                    <td class="txt_c">LTC/KRW</td>
+                    <td class="change fw7">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                <tr>
+                    <td><span class="xrp ic">리플</span></td>
+                    <td class="txt_c">XRP/KRW</td>
+                    <td class="change fw7">0.16242678<br>
+                        <span>≈ 1,588,272KRW</span></td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td class="fw7">0.082500</td>
+                    <td class="fw7">0.084800</td>
+                    <td>12,389.273</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <a href="#" class="refresh"><img src="../../assets/images/module/refresh_btn.png" alt="새로고침"></a>
+        </li><!-- //ETH 전체코인동향 -->
+
+    </ul><!-- //전체코인동향 목록 -->
+
+    <script type="text/javascript">
+        //전체코인동향 탭 show/hide
+        $('.line_tab > li > button').click(function(){
+            var tabIdx = $(this).parent().index();
+            $('.line_tab > li').removeClass('on');
+            $(this).parent().addClass('on');
+            $('.coin_trend_list > li').hide().eq(tabIdx).show();
+            return false;
+        });
+    </script>
+
+
+</div><!-- //코인동향 전체코인동향 끝 -->
+
+<? include ("sub_foot.html"); ?><!-- 서브용 Footer -->
+<? include ("footer.html"); ?><!-- 공통 Footer -->
